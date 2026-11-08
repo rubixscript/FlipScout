@@ -1,0 +1,191 @@
+<resources>
+    <string name="app_name">FlipScout</string>
+    <string name="tagline">Buy low. Sell high. Keep score.</string>
+
+    <!-- Status -->
+    <string name="status_watching">Watching</string>
+    <string name="status_bought">Bought</string>
+    <string name="status_listed">Listed</string>
+    <string name="status_sold">Sold</string>
+
+    <!-- Home -->
+    <string name="new_item">New item</string>
+    <string name="filter_all">All</string>
+    <string name="search_items_hint">Search your items</string>
+    <string name="sort_newest">Newest</string>
+    <string name="sort_oldest">Oldest</string>
+    <string name="sort_profit">Profit</string>
+    <string name="sort_roi">ROI</string>
+    <string name="sort_price">Price</string>
+    <string name="filters">Filters</string>
+    <string name="filters_active">Filters · %1$d</string>
+    <string name="clear_filters">Clear</string>
+    <string name="done">Done</string>
+    <string name="filter_category">Category</string>
+    <string name="filter_platform">Platform</string>
+    <string name="menu_export_csv">Export items (CSV)</string>
+    <string name="menu_export_backup">Export backup (JSON)</string>
+    <string name="menu_import">Import backup</string>
+    <string name="imported_items_sellers">Imported %1$d items · %2$d sellers</string>
+    <string name="import_failed">Couldn\'t read that file</string>
+    <string name="import_nothing">Nothing to import in that file</string>
+    <string name="hero_total_profit">TOTAL PROFIT</string>
+    <string name="hero_in_stock">In stock</string>
+    <string name="hero_items_sold">Items sold</string>
+    <string name="hero_avg_roi">Avg ROI</string>
+    <string name="empty_title">Your flip list is empty</string>
+    <string name="empty_hint">Tap New item, or share a Marketplace or eBay link to FlipScout to save it here.</string>
+    <string name="empty_filtered_title">Nothing with that status</string>
+    <string name="empty_filtered_hint">Try another filter.</string>
+    <string name="item_untitled">Untitled</string>
+    <string name="item_fallback_name">item</string>
+    <string name="swipe_mark">Mark %1$s</string>
+    <string name="swipe_delete">Delete</string>
+    <string name="deleted_message">Deleted \"%1$s\"</string>
+    <string name="undo">Undo</string>
+
+    <!-- Editor -->
+    <string name="editor_new">New item</string>
+    <string name="editor_edit">Edit item</string>
+    <string name="field_title">What is it?</string>
+    <string name="field_buy">Buy</string>
+    <string name="field_sold">Sold</string>
+    <string name="field_target">Target</string>
+    <string name="field_fees">Fees</string>
+    <string name="field_link">Listing link (Marketplace, eBay…)</string>
+    <string name="field_notes">Condition &amp; notes</string>
+    <string name="details_show">More details</string>
+    <string name="details_hide">Hide details</string>
+    <string name="field_shipping">Shipping</string>
+    <string name="field_quantity">Qty</string>
+    <string name="field_category">Category</string>
+    <string name="field_platform">Sold on</string>
+    <string name="field_tags">Tags (comma separated)</string>
+    <string name="field_seller">Bought from</string>
+    <string name="field_sold_date">Sold date</string>
+    <string name="no_seller">No seller</string>
+    <string name="change_date">Change</string>
+    <string name="set_date">Set</string>
+    <string name="open_link">Open link ↗</string>
+    <string name="profit">Profit</string>
+    <string name="projected_profit">Projected profit</string>
+    <string name="roi_format">ROI %1$s%%</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
+    <!-- Insights -->
+    <string name="tab_insights">📊  Insights</string>
+    <string name="insights_title">Insights</string>
+    <string name="insights_subtitle">Where the money comes from.</string>
+    <string name="insights_monthly">Monthly profit</string>
+    <string name="insights_six_months">Last 6 months</string>
+    <string name="insights_by_category">Profit by category</string>
+    <string name="insights_by_platform">Profit by platform</string>
+    <string name="insights_sold_count">%1$d sold</string>
+    <string name="insights_empty_title">No sales yet</string>
+    <string name="insights_empty_hint">Mark an item sold and your profit trends will show up here.</string>
+    <string name="uncategorised">Uncategorised</string>
+    <string name="no_platform">No platform</string>
+
+    <!-- Navigation & sharing -->
+    <string name="tab_items">📦  Items</string>
+    <string name="tab_sellers">⭐  Sellers</string>
+    <string name="share_title">What did you share?</string>
+    <string name="share_as_listing">A listing to track</string>
+    <string name="share_as_seller">A seller or store</string>
+
+    <!-- Search -->
+    <string name="tab_search">🔍  Search</string>
+    <string name="search_title">Search</string>
+    <string name="search_subtitle">Find deals fast on eBay and Marketplace.</string>
+    <string name="search_hint">Keywords (e.g. nintendo switch)</string>
+    <string name="search_ebay">eBay</string>
+    <string name="search_ebay_sold">eBay sold</string>
+    <string name="search_marketplace">Marketplace</string>
+    <string name="search_recent">Recent searches</string>
+    <string name="search_saved">My keywords</string>
+    <string name="search_uncategorised">Uncategorised</string>
+    <string name="keywords_title">✨  Keyword ideas</string>
+    <string name="keywords_topic_hint">Topic (optional), e.g. retro gaming</string>
+    <string name="keywords_prompt_copied">Prompt copied. Paste it in the AI, copy its JSON reply, then tap Import from clipboard.</string>
+    <string name="keywords_prompt_label">Keyword ideas prompt</string>
+    <string name="keywords_open">✨ Keyword ideas</string>
+    <string name="keywords_import_clipboard">📋 Import from clipboard</string>
+    <string name="keywords_steps">1. Pick an AI: the prompt is copied for you.\n2. Paste it there and copy the JSON reply.\n3. Come back and tap Import from clipboard.</string>
+    <string name="import_clipboard_empty">No keywords on the clipboard. Copy the AI\'s JSON reply first.</string>
+    <string name="search_sold_short">Sold</string>
+    <string name="search_fb_short">FB</string>
+    <string name="menu_change_category">Change category</string>
+    <string name="menu_pin">Save to my keywords</string>
+    <string name="menu_unpin">Remove from my keywords</string>
+    <string name="import_nothing_new">Everything on the clipboard is already saved.</string>
+    <string name="imported_count">Added %1$d keywords</string>
+    <string name="category_rename_title">Rename category</string>
+    <string name="menu_rename_category">Rename</string>
+    <string name="menu_ungroup">Ungroup (keep keywords)</string>
+    <string name="menu_delete_category">Delete category</string>
+    <string name="category_deleted_message">Deleted \"%1$s\" and its %2$d keywords</string>
+    <string name="category_ungrouped_message">Ungrouped \"%1$s\"</string>
+    <string name="category_title">Category</string>
+    <string name="category_hint">Category name</string>
+    <string name="category_remove">Remove</string>
+
+    <!-- Sellers -->
+    <string name="sellers_title">Sellers</string>
+    <string name="sellers_subtitle">People and stores with good prices.</string>
+    <string name="new_seller">New seller</string>
+    <string name="sellers_empty_title">No saved sellers yet</string>
+    <string name="sellers_empty_hint">Save the profile or store link of anyone who sells at a good price. You can also share a profile to FlipScout.</string>
+    <string name="seller_fallback_name">seller</string>
+    <string name="seller_editor_new">New seller</string>
+    <string name="seller_editor_edit">Edit seller</string>
+    <string name="field_seller_name">Name or store</string>
+    <string name="field_seller_url">Profile or store link</string>
+    <string name="field_seller_notes">Notes (what they sell, prices, how to reach them)</string>
+    <string name="seller_favorite_on">★  Favourite</string>
+    <string name="seller_favorite_off">☆  Mark as favourite</string>
+    <string name="seller_stats">%1$d bought · %2$d sold</string>
+
+    <!-- Listing assistant -->
+    <string name="assistant_title">✨  Listing assistant</string>
+    <string name="assistant_subtitle">Copies a smart prompt, then opens your AI. Paste it and attach your photos.</string>
+    <string name="ai_chatgpt">ChatGPT</string>
+    <string name="ai_gemini">Gemini</string>
+    <string name="prompt_copied">Prompt copied. Paste it and attach your photos.</string>
+    <string name="prompt_clip_label">Listing prompt</string>
+    <string name="section_items">Items</string>
+    <string name="menu_more">More</string>
+    <string name="back">Back</string>
+    <string name="item_age_days">%1$dd</string>
+    <string name="photo_add">Add photo</string>
+    <string name="photo_remove">Remove photo</string>
+    <string name="photo_failed">Couldn\'t load that photo. Try another one.</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_data_section">Data</string>
+    <string name="settings_dev_section">Developer</string>
+    <string name="reset_all">Reset all data</string>
+    <string name="reset_all_hint">Deletes every item, seller and saved keyword. You can undo right after.</string>
+    <string name="reset_done">All data deleted</string>
+    <string name="mock_add">Add mock data</string>
+    <string name="mock_add_hint">14 sample items, 3 sellers and 13 search keywords. Safe to add repeatedly.</string>
+    <string name="mock_delete">Delete mock data</string>
+    <string name="mock_delete_hint">Removes only the sample records. Your own items stay.</string>
+    <string name="mock_added">Added %1$d mock items</string>
+    <string name="mock_deleted">Removed %1$d mock items</string>
+    <string name="add_action">+ Add</string>
+    <string name="packs_button">+ Keywords</string>
+    <string name="packs_title">Pick your interests</string>
+    <string name="packs_subtitle">Tap what you flip. We\'ll add ready-made keywords, sorted into categories. ★ marks categories from your own items.</string>
+    <string name="packs_hint_pick">Pick an interest above to see its keywords.</string>
+    <string name="packs_hint_all_added">Everything here is already in your library.</string>
+    <plurals name="packs_add">
+        <item quantity="one">Add %d keyword</item>
+        <item quantity="other">Add %d keywords</item>
+    </plurals>
+    <string name="packs_empty_title">Start with your interests</string>
+    <string name="packs_empty_hint">Pick what you like to flip and get ready-made keywords to search eBay and Facebook Marketplace in one tap.</string>
+    <string name="packs_empty_cta">Browse keyword packs</string>
+    <string name="menu_use_in_search">Use in search box</string>
+    <string name="packs_more_ways">More ways to add keywords</string>
+</resources>

@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "FlipScout",
+  "description": "One-tap capture of eBay and Facebook Marketplace listings into your flip tracker",
+  "version": "0.3.0",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "scripting",
+    "clipboardWrite",
+    "clipboardRead",
+    "contextMenus",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://*.ebay.com/*",
+    "https://www.facebook.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "FlipScout"
+  },
+  "commands": {
+    "save-current-listing": {
+      "suggested_key": {
+        "default": "Alt+Shift+S",
+        "windows": "Alt+Shift+S",
+        "mac": "Alt+Shift+S",
+        "chromeos": "Alt+Shift+S",
+        "linux": "Alt+Shift+S"
+      },
+      "description": "Save the open eBay / Marketplace listing to FlipScout"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.ebay.com/itm/*",
+        "https://www.facebook.com/marketplace/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+build/
+.gradle/
+local.properties
+*.iml
+.idea/
+
+# Release secrets - never commit
+keystore.properties
+*.jks
+*.keystore
+play-service-account.json
+.kotlin/
