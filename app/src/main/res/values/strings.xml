@@ -91,6 +91,7 @@
     <!-- Navigation & sharing -->
     <string name="tab_items">📦  Items</string>
     <string name="tab_sellers">⭐  Sellers</string>
+    <string name="ebay_sold_prices">See eBay sold prices</string>
     <string name="share_title">What did you share?</string>
     <string name="share_as_listing">A listing to track</string>
     <string name="share_as_seller">A seller or store</string>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Sparkles, Trash2, X } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Sparkles, Tag, Trash2, X } from 'lucide-react';
 import { money } from '../../styles';
 import { PLATFORMS, STATUSES, listingPrompt, profit, roi } from '../../utils/logic';
 import { Card, Chip, btn, copy, input, openUrl } from '../ui';
@@ -13,7 +13,27 @@ function Num({ t, label, value, onChange }) {
   );
 }
 
+// The listing photo, shown large at the top of the editor; a tag icon stands in when there is none or it fails.
+function Photo({ t, url }) {
+  const [failed, setFailed] = useState(false);
+  useEffect(() => setFailed(false), [url]);
+  return (
+    <div style={{ height: 220, borderRadius: 16, background: t.surfaceVar, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 12, flexShrink: 0 }}>
+      {url && !failed ? (
+        <img src={url} alt="" onError={() => setFailed(true)} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+      ) : (
+        <Tag size={40} strokeWidth={1.5} color={t.muted} />
+      )}
+    </div>
+  );
+}
+
 export default function Editor({ t, item, sellers, categories, onChange, onClose, onDelete, toast }) {
+  useEffect(() => {
+    const onKey = (e) => e.key === 'Escape' && onClose();
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [onClose]);
   const set = (patch) => onChange({ ...item, ...patch });
   const p = profit(item);
   const [tagText, setTagText] = useState((item.tags || []).join(', '));
@@ -23,12 +43,20 @@ export default function Editor({ t, item, sellers, categories, onChange, onClose
     toast('Listing prompt copied — paste it into ChatGPT or Gemini with your photos');
   };
   return (
-    <div>
+    <div
+      onClick={onClose}
+      style={{ position: 'fixed', inset: 0, zIndex: 40, background: 'rgba(0,0,0,0.55)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+    >
+    <div
+      onClick={(e) => e.stopPropagation()}
+      style={{ width: '90%', maxWidth: 760, height: '90%', overflowY: 'auto', background: t.bg, color: t.text, border: `1px solid ${t.outlineVar}`, borderRadius: 20, padding: 16, boxShadow: '0 24px 60px rgba(0,0,0,0.35)' }}
+    >
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
         <button style={btn(t)} onClick={onClose}><X size={14} /> Done</button>
         <div style={{ flex: 1, fontWeight: 800, fontSize: 15 }}>Edit flip</div>
         <button style={btn(t, { style: { color: t.loss } })} onClick={onDelete}><Trash2 size={14} /> Delete</button>
       </div>
+      <Photo t={t} url={item.photoUrl} />
       <input value={item.title} onChange={(e) => set({ title: e.target.value })} placeholder="Title" style={input(t, { marginBottom: 10, fontWeight: 700 })} />
       <div style={{ display: 'flex', gap: 6, marginBottom: 12 }}>
         {STATUSES.map((s) => (
@@ -73,6 +101,7 @@ export default function Editor({ t, item, sellers, categories, onChange, onClose
           <button style={btn(t)} onClick={() => { prompt('eBay'); openUrl('https://chatgpt.com/'); }}>Copy + open ChatGPT</button>
         </div>
       </Card>
+    </div>
     </div>
   );
 }

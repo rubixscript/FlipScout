@@ -218,7 +218,17 @@ private fun HomeContent(
             }
             item { SectionHeader(stringResource(R.string.section_items), state.items.size) }
             item { FilterRow(state, onFilterSelected, onSortSelected) }
-            if (state.categories.isNotEmpty() || state.platforms.isNotEmpty()) {
+            if (state.categories.isNotEmpty()) {
+                item {
+                    Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        state.categories.forEach { category ->
+                            Pill(category, category in state.query.categories, MaterialTheme.colorScheme.primary,
+                                onClick = { onToggleCategory(category) })
+                        }
+                    }
+                }
+            }
+            if (state.platforms.isNotEmpty()) {
                 item {
                     TextButton(onClick = { showFilters = true }) {
                         val active = state.query.categories.size + state.query.platforms.size

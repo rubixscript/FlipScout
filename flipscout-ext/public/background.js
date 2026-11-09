@@ -37,9 +37,25 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
+// Same matching as guessCategory in src/utils/logic.js (the shell files are not bundled with the popup).
+const KW_STOP = new Set(['new', 'sealed', 'unopened', 'kit', 'set', 'lot', 'used', 'the', 'and', 'for', 'with', 'bundle', 'box', 'nib', 'nwt', 'brand', 'vintage', 'retro', 'rare', 'mint', 'original']);
+const kwWords = (s) => (String(s || '').toLowerCase().match(/[a-z0-9]+/g) || []).filter((w) => w.length >= 3 && !KW_STOP.has(w));
+function guessCategory(title, searches) {
+  const have = new Set(kwWords(title));
+  let best = '';
+  let bestHits = 0;
+  for (const s of searches || []) {
+    const words = kwWords(s.q);
+    if (!s.cat || !words.length) continue;
+    const hits = words.filter((w) => have.has(w)).length;
+    if (hits >= Math.min(2, words.length) && hits > bestHits) { best = s.cat; bestHits = hits; }
+  }
+  return best;
+}
+
 async function saveListing(listing) {
   if (!listing || !listing.url) return { ok: false, error: 'nothing to save' };
-  const { items = [], sellers = [] } = await chrome.storage.local.get(['items', 'sellers']);
+  const { items = [], sellers = [], searches = [] } = await chrome.storage.local.get(['items', 'sellers', 'searches']);
 
   const dup = items.find((i) => i.link === listing.url);
   if (dup) return { ok: true, duplicate: true, item: dup };
@@ -72,7 +88,7 @@ async function saveListing(listing) {
     ship: 0,
     qty: 1,
     status: 'WATCHING',
-    cat: '',
+    cat: guessCategory(listing.title, searches),
     plat: PLATFORM_LABEL[listing.platform] || '',
     tags: [],
     seller: sellerId,
@@ -240,3 +256,50 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
   })();
   return true; // keep the channel open for the async sendResponse
 });
+
+// --- dev bridge: lets the flipscout-inject / flipscout-rate Claude skills read and write
+// chrome.storage.local. The dev machine hosts a WS server on 18771; this worker connects out
+// to it (the service worker idles after ~30s, so an alarm reconnects it). Local only.
+const BRIDGE_URL = 'ws://localhost:18771';
+const BRIDGE_KEYS = ['items', 'sellers', 'searches', 'settings'];
+let bridge = null;
+
+async function bridgeAction(action, params) {
+  if (action === 'ping') return { ok: true };
+  if (action === 'get_storage') return chrome.storage.local.get(params.keys || BRIDGE_KEYS);
+  if (action === 'inject_storage') {
+    const data = {};
+    for (const k of Object.keys(params.data || {})) if (BRIDGE_KEYS.includes(k)) data[k] = params.data[k];
+    await chrome.storage.local.set(data);
+    return { written: Object.keys(data) };
+  }
+  throw new Error('unknown bridge action: ' + action);
+}
+
+function connectBridge() {
+  if (bridge && bridge.readyState <= 1) return;
+  try {
+    bridge = new WebSocket(BRIDGE_URL);
+  } catch (e) {
+    bridge = null;
+    return;
+  }
+  const ws = bridge;
+  ws.onmessage = async (ev) => {
+    let msg;
+    try { msg = JSON.parse(ev.data); } catch (e) { return; }
+    try {
+      const data = await bridgeAction(msg.action, msg.params || {});
+      ws.send(JSON.stringify({ id: msg.id, success: true, data }));
+    } catch (e) {
+      ws.send(JSON.stringify({ id: msg.id, success: false, error: String(e) }));
+    }
+  };
+  ws.onclose = () => { if (bridge === ws) bridge = null; };
+  ws.onerror = () => {};
+}
+
+chrome.alarms.create('flipscout-bridge', { periodInMinutes: 0.5 });
+chrome.alarms.onAlarm.addListener((a) => { if (a.name === 'flipscout-bridge') connectBridge(); });
+chrome.runtime.onStartup.addListener(connectBridge);
+connectBridge();

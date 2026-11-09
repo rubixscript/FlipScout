@@ -82,10 +82,10 @@ export default function App() {
         onUndo={listing.undo}
       />
       <TabBar t={t} tabs={TABS} active={tab} onChange={setTab} />
-      {tab === 'items' && <Items t={t} items={store.items} sellers={store.sellers} setItems={store.setItems} toast={show} />}
+      {tab === 'items' && <Items t={t} items={store.items} sellers={store.sellers} searches={store.searches} setItems={store.setItems} toast={show} />}
       {tab === 'sellers' && <Sellers t={t} items={store.items} sellers={store.sellers} setSellers={store.setSellers} toast={show} />}
       {tab === 'insights' && <Insights t={t} items={store.items} />}
-      {tab === 'search' && <SearchTab t={t} searches={store.searches} setSearches={store.setSearches} toast={show} />}
+      {tab === 'search' && <SearchTab t={t} searches={store.searches} setSearches={store.setSearches} settings={store.settings} setSettings={store.setSettings} toast={show} />}
       {scan.listings && (
         <ScanModal
           t={t}

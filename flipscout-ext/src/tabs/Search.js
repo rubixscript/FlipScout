@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronRight, ClipboardPaste, Pin, PinOff, Search as SearchIcon, Sparkles, X } from 'lucide-react';
-import { KEYWORD_PACKS, keywordsPrompt, parseKeywords, searchUrl } from '../utils/logic';
-import { Card, btn, copy, input, openUrl } from './ui';
+import { ChevronDown, ChevronRight, ClipboardPaste, MapPin, MoreHorizontal, Pin, PinOff, Search as SearchIcon, Sparkles, X } from 'lucide-react';
+import { KEYWORD_PACKS, keywordsPrompt, parseKeywords, parseMarketplaceLocation, searchUrl } from '../utils/logic';
+import { Card, ConfirmDelete, btn, copy, input, openUrl } from './ui';
 
 const TARGETS = [['EBAY', 'eBay'], ['EBAY_SOLD', 'Sold'], ['MARKETPLACE', 'Marketplace']];
 
-export default function SearchTab({ t, searches, setSearches, toast }) {
+export default function SearchTab({ t, searches, setSearches, settings = {}, setSettings, toast }) {
+  const loc = settings.mpLocation || '';
   const [q, setQ] = useState('');
   const [collapsed, setCollapsed] = useState(() => new Set(['*']));
   const [topic, setTopic] = useState('');
@@ -20,7 +21,7 @@ export default function SearchTab({ t, searches, setSearches, toast }) {
       const recent = searches.filter((s) => !s.pin).slice(0, 29);
       setSearches([{ id: crypto.randomUUID(), q: text, pin: false, cat: '', at: Date.now() }, ...searches.filter((s) => s.pin), ...recent]);
     }
-    openUrl(searchUrl(target, text));
+    openUrl(searchUrl(target, text, { loc }));
   };
   const toggle = (s) => setSearches(searches.map((x) => (x.id === s.id ? { ...x, pin: !x.pin } : x)));
   const del = (s) => { setSearches(searches.filter((x) => x.id !== s.id)); toast('Keyword removed', () => setSearches(searches)); };
@@ -45,6 +46,23 @@ export default function SearchTab({ t, searches, setSearches, toast }) {
     } catch (e) { toast('Could not read the clipboard'); }
   };
 
+  // Paste any Marketplace link (or an id/city slug) once; every Marketplace search then uses it.
+  const saveLocation = (text) => {
+    if (!text.trim()) { setSettings({ ...settings, mpLocation: '' }); return toast('Location cleared'); }
+    const next = parseMarketplaceLocation(text);
+    if (!next) return toast('Paste a Marketplace link like facebook.com/marketplace/109493702409366/search');
+    setSettings({ ...settings, mpLocation: next });
+    toast('Marketplace searches now use that location');
+  };
+
+  // Removes the category's pinned keywords. Undo puts them back.
+  const delCategory = (cat) => {
+    const before = searches;
+    const n = searches.filter((s) => s.pin && (s.cat || 'Uncategorised') === cat).length;
+    setSearches(searches.filter((s) => !(s.pin && (s.cat || 'Uncategorised') === cat)));
+    toast(`Deleted “${cat}” and ${n} keyword${n === 1 ? '' : 's'}`, () => setSearches(before));
+  };
+
   const pinned = searches.filter((s) => s.pin);
   const recent = searches.filter((s) => !s.pin);
   const groups = {};
@@ -61,6 +79,8 @@ export default function SearchTab({ t, searches, setSearches, toast }) {
           <button key={k} style={btn(t, { primary: k === 'EBAY' })} disabled={!q.trim()} onClick={() => go(k, q)}>{label}</button>
         ))}
       </div>
+
+      <LocationField key={loc} t={t} loc={loc} onSave={saveLocation} />
 
       <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
         <button style={btn(t)} onClick={() => setShowTools(!showTools)}><Sparkles size={14} /> Add keywords</button>
@@ -88,9 +108,12 @@ export default function SearchTab({ t, searches, setSearches, toast }) {
         const open = !collapsed.has(cat);
         return (
           <div key={cat} style={{ marginBottom: 6 }}>
-            <button onClick={() => { const n = new Set(collapsed); open ? n.add(cat) : n.delete(cat); setCollapsed(n); }} style={{ ...btn(t), width: '100%', justifyContent: 'flex-start', border: 'none', padding: '8px 2px', color: t.muted, fontWeight: 700 }}>
-              {open ? <ChevronDown size={15} /> : <ChevronRight size={15} />} {cat.toUpperCase()} <span style={{ fontWeight: 500 }}>{groups[cat].length}</span>
-            </button>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <button onClick={() => { const n = new Set(collapsed); open ? n.add(cat) : n.delete(cat); setCollapsed(n); }} style={{ ...btn(t), flex: 1, justifyContent: 'flex-start', border: 'none', padding: '8px 2px', color: t.muted, fontWeight: 700 }}>
+                {open ? <ChevronDown size={15} /> : <ChevronRight size={15} />} {cat.toUpperCase()} <span style={{ fontWeight: 500 }}>{groups[cat].length}</span>
+              </button>
+              <ConfirmDelete t={t} label="Delete category and its keywords" onConfirm={() => delCategory(cat)} />
+            </div>
             {open && groups[cat].map((s) => <KeywordRow key={s.id} t={t} s={s} go={go} toggle={toggle} del={del} />)}
           </div>
         );
@@ -109,13 +132,36 @@ export default function SearchTab({ t, searches, setSearches, toast }) {
   );
 }
 
+function LocationField({ t, loc, onSave }) {
+  const [text, setText] = useState(loc);
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
+      <MapPin size={15} color={loc ? t.emerald : t.muted} />
+      <input
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        onBlur={() => text !== loc && onSave(text)}
+        onKeyDown={(e) => e.key === 'Enter' && e.currentTarget.blur()}
+        placeholder="Marketplace location: paste any Marketplace link (optional)"
+        spellCheck={false}
+        style={input(t, { padding: '7px 10px', fontSize: 12.5 })}
+      />
+    </div>
+  );
+}
+
+// Marketplace is the one-tap default; eBay and Sold sit behind the "more" toggle.
 function KeywordRow({ t, s, go, toggle, del }) {
+  const [more, setMore] = useState(false);
+  const chip = { padding: '4px 10px', fontSize: 12, borderRadius: 999 };
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '6px 2px', borderBottom: `1px solid ${t.outlineVar}` }}>
-      <span style={{ flex: 1, fontSize: 13.5, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{s.q}</span>
-      {TARGETS.map(([k, label]) => (
-        <button key={k} onClick={() => go(k, s.q)} style={btn(t, { style: { padding: '4px 10px', fontSize: 12, borderRadius: 999 } })}>{label}</button>
+      <span onClick={() => go('MARKETPLACE', s.q)} title="Search Marketplace" style={{ flex: 1, fontSize: 13.5, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', cursor: 'pointer' }}>{s.q}</span>
+      {more && TARGETS.filter(([k]) => k !== 'MARKETPLACE').map(([k, label]) => (
+        <button key={k} onClick={() => go(k, s.q)} style={btn(t, { style: chip })}>{label}</button>
       ))}
+      <button onClick={() => go('MARKETPLACE', s.q)} style={btn(t, { primary: true, style: chip })}>Marketplace</button>
+      <button onClick={() => setMore(!more)} title="eBay / Sold" style={{ ...btn(t), border: 'none', padding: 6 }}><MoreHorizontal size={14} /></button>
       <button onClick={() => toggle(s)} title={s.pin ? 'Unpin' : 'Pin to library'} style={{ ...btn(t), border: 'none', padding: 6 }}>{s.pin ? <PinOff size={14} /> : <Pin size={14} />}</button>
       <button onClick={() => del(s)} title="Remove" style={{ ...btn(t), border: 'none', padding: 6 }}><X size={14} /></button>
     </div>

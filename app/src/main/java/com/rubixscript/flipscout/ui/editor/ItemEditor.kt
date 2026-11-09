@@ -56,7 +56,9 @@ import com.rubixscript.flipscout.R
 import com.rubixscript.flipscout.data.Item
 import com.rubixscript.flipscout.data.Seller
 import com.rubixscript.flipscout.data.Status
+import com.rubixscript.flipscout.domain.SearchTarget
 import com.rubixscript.flipscout.domain.listingPrompt
+import com.rubixscript.flipscout.domain.searchUrl
 import com.rubixscript.flipscout.ui.components.GradientButton
 import com.rubixscript.flipscout.ui.components.MoneyField
 import com.rubixscript.flipscout.ui.components.Pill
@@ -150,6 +152,12 @@ fun ItemEditor(
                 )
                 SoftTextField(title, { title = it }, stringResource(R.string.field_title),
                     singleLine = true, modifier = Modifier.weight(1f))
+            }
+
+            if (title.isNotBlank()) {
+                TextButton(onClick = { ctx.openUrl(searchUrl(SearchTarget.EBAY_SOLD, title)) }) {
+                    Text(stringResource(R.string.ebay_sold_prices), fontWeight = FontWeight.Bold)
+                }
             }
 
             Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {

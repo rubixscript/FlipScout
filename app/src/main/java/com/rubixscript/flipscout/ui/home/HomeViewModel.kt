@@ -97,11 +97,15 @@ class HomeViewModel(private val repository: ItemRepository) : ViewModel() {
 
     fun onEditItem(item: Item) = _state.update { it.copy(editor = EditorState(item, isNew = false)) }
 
-    /** Opens a new item pre-filled with whatever the share sheet gave us (link, title, asking price). */
+    /**
+     * Adds an item straight away from whatever the share sheet gave us (link, title, asking price), then
+     * opens it for tweaks. It is already saved, so dismissing the editor never loses the shared listing.
+     */
     fun onSharedLink(text: String) {
         val listing = parseSharedListing(text)
         val item = Item(title = listing.title, buyPrice = listing.price, link = listing.url)
-        _state.update { it.copy(editor = EditorState(item, isNew = true)) }
+        updateItems { list -> listOf(item) + list }
+        _state.update { it.copy(editor = EditorState(item, isNew = false)) }
     }
 
     fun onEditorDismissed() = _state.update { it.copy(editor = null) }

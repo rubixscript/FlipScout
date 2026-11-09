@@ -1,15 +1,16 @@
-import React from 'react';
-import { Download, ListChecks, Maximize2, Upload } from 'lucide-react';
+import React, { useState } from 'react';
+import { Download, ListChecks, Maximize2, MoreHorizontal, Upload } from 'lucide-react';
 import { btn } from '../tabs/ui';
 
 export default function Header({ t, count, onScan, canScan, onExport, onImport, onExpand }) {
+  const [menu, setMenu] = useState(false);
+  const item = { ...btn(t), width: '100%', justifyContent: 'flex-start', border: 'none', borderRadius: 8 };
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '2px 2px 12px' }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: 8, margin: '2px 2px 12px', position: 'relative' }}>
       <div style={{ width: 28, height: 28, borderRadius: 9, background: 'linear-gradient(160deg,#5A5B63,#151517)', color: t.emerald, fontWeight: 800, fontSize: 16, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>F</div>
       <div style={{ fontWeight: 800, fontSize: 19, letterSpacing: -0.4, flex: 1 }}>
         FlipScout <span style={{ color: t.muted, fontSize: 12.5, fontWeight: 600 }}>{count > 0 ? `${count} tracked` : ''}</span>
       </div>
-      {onExpand && <button style={btn(t)} onClick={onExpand} title="Open full screen"><Maximize2 size={14} /></button>}
       {onScan && (
         <button
           style={btn(t)}
@@ -20,8 +21,17 @@ export default function Header({ t, count, onScan, canScan, onExport, onImport, 
           <ListChecks size={14} /> Scan
         </button>
       )}
-      <button style={btn(t)} onClick={onImport} title="Import a backup from the app"><Upload size={14} /> Import</button>
-      <button style={btn(t)} onClick={onExport} disabled={!count} title="Export a backup the app can import"><Download size={14} /> Export</button>
+      {onExpand && <button style={btn(t)} onClick={onExpand} title="Open full screen"><Maximize2 size={14} /></button>}
+      <button style={btn(t)} onClick={() => setMenu(!menu)} title="Import / Export"><MoreHorizontal size={14} /></button>
+      {menu && (
+        <div
+          onMouseLeave={() => setMenu(false)}
+          style={{ position: 'absolute', right: 0, top: 40, zIndex: 20, background: t.bg, border: `1px solid ${t.outlineVar}`, borderRadius: 12, padding: 4, minWidth: 190, boxShadow: '0 10px 30px rgba(0,0,0,0.25)' }}
+        >
+          <button style={item} onClick={() => { setMenu(false); onImport(); }}><Upload size={14} /> Import from clipboard</button>
+          <button style={item} onClick={() => { setMenu(false); onExport(); }} disabled={!count}><Download size={14} /> Export backup</button>
+        </div>
+      )}
     </div>
   );
 }

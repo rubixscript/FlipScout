@@ -4,7 +4,7 @@ import { loadAll, onStorageChanged, saveKey } from '../utils/storage';
 // Loads items/sellers/searches from chrome.storage.local and keeps them live.
 // Setters persist immediately (no save button) and update state optimistically.
 export default function useStore() {
-  const [data, setData] = useState({ items: [], sellers: [], searches: [] });
+  const [data, setData] = useState({ items: [], sellers: [], searches: [], settings: {} });
 
   useEffect(() => {
     const refresh = () => loadAll().then(setData);
@@ -25,5 +25,6 @@ export default function useStore() {
     setItems: setter('items'),
     setSellers: setter('sellers'),
     setSearches: setter('searches'),
+    setSettings: setter('settings'),
   };
 }

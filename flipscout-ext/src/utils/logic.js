@@ -57,11 +57,12 @@ export function profitBy(items, keyFn, fallback) {
 export const ageDays = (i, now = Date.now()) => (i.at > 0 ? Math.max(0, Math.floor((now - i.at) / 86400000)) : 0);
 export const isStale = (i, days = 14) => (i.status === 'BOUGHT' || i.status === 'LISTED') && ageDays(i) >= days;
 
-export function queryItems(items, { text = '', status = null, sort = 'NEWEST' }) {
+export function queryItems(items, { text = '', status = null, cats = [], sort = 'NEWEST' }) {
   const n = text.trim().toLowerCase();
   const m = items.filter(
     (i) =>
       (!status || i.status === status) &&
+      (!cats.length || cats.includes(i.cat)) &&
       (!n || [i.title, i.notes, i.cat].some((s) => (s || '').toLowerCase().includes(n)) ||
         (i.tags || []).some((t) => t.toLowerCase().includes(n)))
   );
@@ -72,11 +73,22 @@ export function queryItems(items, { text = '', status = null, sort = 'NEWEST' })
   return [...m].sort(by);
 }
 
-export function searchUrl(target, query) {
+// Pulls the Marketplace location out of any Marketplace link ("/marketplace/109493702409366/search/?query=x"
+// or "/marketplace/toronto/") or accepts a bare id/slug. Returns '' when there is none.
+export function parseMarketplaceLocation(text) {
+  const s = String(text || '').trim();
+  const m = s.match(/marketplace\/([^/?#]+)/i);
+  const slug = m ? m[1] : /^[\w-]+$/.test(s) ? s : '';
+  return ['search', 'item', 'category', 'you', 'inbox', 'notifications'].includes(slug.toLowerCase()) ? '' : slug;
+}
+
+// loc is optional: without it Facebook falls back to the location saved on the account.
+export function searchUrl(target, query, { loc = '' } = {}) {
   const q = encodeURIComponent(query.trim()).replace(/%20/g, '+');
   if (target === 'EBAY') return `https://www.ebay.com/sch/i.php?_nkw=${q}`;
   if (target === 'EBAY_SOLD') return `https://www.ebay.com/sch/i.php?_nkw=${q}&LH_Sold=1&LH_Complete=1`;
-  return `https://www.facebook.com/marketplace/search/?query=${q}`;
+  const base = loc ? `https://www.facebook.com/marketplace/${encodeURIComponent(loc)}/search/` : 'https://www.facebook.com/marketplace/search/';
+  return `${base}?query=${q}&sortBy=creation_time_descend`; // newest first: catch deals before others do
 }
 
 export function listingPrompt(item, platform) {
@@ -97,8 +109,30 @@ export function keywordsPrompt(topic) {
   return `You are an expert reseller. Give me 40 eBay / Facebook Marketplace search keywords for flipping ${topic || 'resale items'} that sell for a profit. Reply with ONLY JSON like {"Category":["keyword","keyword"]}.`;
 }
 
+// Words that say nothing about WHAT an item is, so they never count as a keyword match.
+const KW_STOP = new Set(['new', 'sealed', 'unopened', 'kit', 'set', 'lot', 'used', 'the', 'and', 'for', 'with', 'bundle', 'box', 'nib', 'nwt', 'brand', 'vintage', 'retro', 'rare', 'mint', 'original']);
+const kwWords = (s) => (String(s || '').toLowerCase().match(/[a-z0-9]+/g) || []).filter((w) => w.length >= 3 && !KW_STOP.has(w));
+
+// Category for a listing title, from the user's saved keywords (each filed under a category).
+// A keyword matches when 2 of its words (or its only word) appear in the title; the best match wins.
+// Returns '' when nothing matches. background.js keeps its own copy of this function.
+export function guessCategory(title, searches) {
+  const have = new Set(kwWords(title));
+  let best = '';
+  let bestHits = 0;
+  for (const s of searches || []) {
+    const words = kwWords(s.q);
+    if (!s.cat || !words.length) continue;
+    const hits = words.filter((w) => have.has(w)).length;
+    if (hits >= Math.min(2, words.length) && hits > bestHits) { best = s.cat; bestHits = hits; }
+  }
+  return best;
+}
+
 // Tolerant parse of an AI reply: {"Cat":[...]}, [{category,keywords}], or a plain array.
-export function parseKeywords(text) {
+export function parseKeywords(raw) {
+  // Copying from a chat window leaves "&#x20;" entities and a "\" at the end of each line; drop both.
+  const text = String(raw || '').replace(/&#x20;|&nbsp;/g, ' ').replace(/\\[ \t]*$/gm, '');
   const m = text.match(/[[{][\s\S]*[\]}]/);
   if (!m) return [];
   let data;
