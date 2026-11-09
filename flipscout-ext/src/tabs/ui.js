@@ -65,3 +65,30 @@ export function ConfirmDelete({ t, label, onConfirm }) {
     </span>
   );
 }
+
+// Same two-step delete, sized for a tile: a trash chip beside the count badge that covers the
+// tile with a confirm overlay (title + hint + Delete/Cancel). Stops clicks so the tile never opens.
+export function TileDelete({ t, title, hint, onConfirm }) {
+  const [asking, setAsking] = useState(false);
+  if (!asking) {
+    return (
+      <button
+        onClick={(e) => { e.stopPropagation(); setAsking(true); }}
+        title={title}
+        style={{ position: 'absolute', top: 7, right: 46, width: 26, height: 26, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0, border: 'none', borderRadius: 999, background: 'rgba(0,0,0,0.6)', color: '#fff', cursor: 'pointer' }}
+      >
+        <Trash2 size={13} />
+      </button>
+    );
+  }
+  return (
+    <div onClick={(e) => e.stopPropagation()} style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.72)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 7, padding: 12, textAlign: 'center', color: '#fff' }}>
+      <div style={{ fontSize: 13, fontWeight: 800, lineHeight: 1.25 }}>{title}</div>
+      <div style={{ fontSize: 11.5, opacity: 0.75 }}>{hint}</div>
+      <div style={{ display: 'flex', gap: 6, marginTop: 2 }}>
+        <button onClick={(e) => { e.stopPropagation(); setAsking(false); onConfirm(); }} style={{ border: 'none', borderRadius: 999, padding: '5px 13px', fontSize: 12, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit', background: t.loss, color: '#fff' }}>Delete</button>
+        <button onClick={(e) => { e.stopPropagation(); setAsking(false); }} style={{ border: 'none', borderRadius: 999, padding: '5px 13px', fontSize: 12, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit', background: 'rgba(255,255,255,0.18)', color: '#fff' }}>Cancel</button>
+      </div>
+    </div>
+  );
+}

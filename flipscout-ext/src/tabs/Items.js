@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { ArrowLeft, Search as SearchIcon, PackageSearch, Tag } from 'lucide-react';
 import { money } from '../styles';
 import { STATUSES, guessCategory, isStale, newItem, nextStatus, portfolioStats, queryItems } from '../utils/logic';
-import { Chip, ConfirmDelete, Empty, btn, input } from './ui';
+import { Chip, ConfirmDelete, Empty, TileDelete, btn, input } from './ui';
 import ItemEditor from './items/ItemEditor';
 import ItemRow from './items/ItemRow';
 import StatTile from './items/StatTile';
@@ -40,14 +40,22 @@ export default function Items({ t, items, sellers, searches = [], setItems, toas
     setItems(items.map((i) => (guesses.has(i.id) ? { ...i, cat: guesses.get(i.id) } : i)));
     toast(`Filed ${guesses.size} item${guesses.size === 1 ? '' : 's'} by keyword`, () => setItems(before));
   };
-  // Deleting a category never deletes items: they move to Unlisted. Undo restores the old categories.
+  // Deleting a category never deletes items: they move to Unlisted. Deleting Unlisted itself
+  // clears the items inside. Undo restores both.
   const deleteCategory = (name) => {
     const before = items;
-    setItems(items.map((i) => (i.cat === name ? { ...i, cat: '' } : i)));
+    if (name === UNLISTED) {
+      const n = before.filter((i) => !i.cat).length;
+      setItems(before.filter((i) => i.cat));
+      toast(`Deleted ${n} unlisted item${n === 1 ? '' : 's'}`, () => setItems(before));
+    } else {
+      setItems(before.map((i) => (i.cat === name ? { ...i, cat: '' } : i)));
+      toast(`Deleted “${name}”, items moved to Unlisted`, () => setItems(before));
+    }
     setOpenCat(null);
-    toast(`Deleted “${name}”, items moved to Unlisted`, () => setItems(before));
   };
   const counts = (s) => items.filter((i) => i.status === s).length;
+  const unlistedCount = items.filter((i) => !i.cat).length;
 
   const update = (item) => setItems(items.map((i) => (i.id === item.id ? item : i)));
   const advance = (item) => {
@@ -105,9 +113,7 @@ export default function Items({ t, items, sellers, searches = [], setItems, toas
             <button onClick={() => setOpenCat(null)} style={{ ...btn(t), border: 'none', padding: '4px 2px', fontWeight: 800, fontSize: 15, flex: 1, justifyContent: 'flex-start' }}>
               <ArrowLeft size={16} /> {current.name} <span style={{ color: t.muted, fontWeight: 600, fontSize: 12.5 }}>{current.items.length}</span>
             </button>
-            {current.name !== UNLISTED && (
-              <ConfirmDelete t={t} label="Delete category" onConfirm={() => deleteCategory(current.name)} />
-            )}
+            <ConfirmDelete t={t} label={current.name === UNLISTED ? 'Delete unlisted items' : 'Delete category'} onConfirm={() => deleteCategory(current.name)} />
           </div>
           {current.name === UNLISTED && guesses.size > 0 && (
             <button style={btn(t, { style: { margin: '2px 0 8px' } })} onClick={autoSort}>
@@ -121,7 +127,14 @@ export default function Items({ t, items, sellers, searches = [], setItems, toas
       ) : (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: 12 }}>
           {groups.map((g) => (
-            <CategoryCard key={g.name} t={t} group={g} onOpen={() => setOpenCat(g.name)} />
+            <CategoryCard
+              key={g.name}
+              t={t}
+              group={g}
+              onOpen={() => setOpenCat(g.name)}
+              onDelete={() => deleteCategory(g.name)}
+              deleteHint={g.name === UNLISTED ? `Deletes all ${unlistedCount} item${unlistedCount === 1 ? '' : 's'}` : 'Items move to Unlisted'}
+            />
           ))}
         </div>
       )}
@@ -144,7 +157,8 @@ export default function Items({ t, items, sellers, searches = [], setItems, toas
 
 
 // Square tile: the first item's photo fills it, with the category name, count and total over a dark fade.
-function CategoryCard({ t, group, onOpen }) {
+// deleteHint says what deleting means for this card (items move vs. items deleted).
+function CategoryCard({ t, group, onOpen, onDelete, deleteHint = 'Items move to Unlisted' }) {
   const [failed, setFailed] = useState(false);
   const cover = group.items.find((i) => i.photoUrl);
   const stale = group.items.filter((i) => isStale(i)).length;
@@ -170,6 +184,7 @@ function CategoryCard({ t, group, onOpen }) {
         <div style={{ fontWeight: 800, fontSize: 14.5, lineHeight: 1.2, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{group.name}</div>
         <div style={{ fontSize: 12, opacity: 0.85, marginTop: 2 }}>{money(Math.round(worth))}</div>
       </div>
+      {onDelete && <TileDelete t={t} title={`Delete “${group.name}”?`} hint={deleteHint} onConfirm={onDelete} />}
     </div>
   );
 }

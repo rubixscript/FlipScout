@@ -1,0 +1,4131 @@
+{
+  "academyView": "strategies",
+  "activeTab": "academy",
+  "fullscreenActiveTab": "game",
+  "fullscreenMode": true,
+  "stockkat_alert_state": {
+    "a-aapl-brk344": {
+      "met": true,
+      "price": 350.87
+    },
+    "a-abbv-mom5": {
+      "met": false,
+      "price": 290.982
+    },
+    "a-cvx-exit": {
+      "met": false,
+      "price": 210.65
+    },
+    "a-lly-buy1080": {
+      "met": false,
+      "price": 1401.3
+    },
+    "a-msft-brk550": {
+      "met": false,
+      "price": 541.85
+    },
+    "a-nvda-brk236": {
+      "met": false,
+      "price": 179.51
+    },
+    "a-xom-exit": {
+      "met": false,
+      "price": 164.295
+    }
+  },
+  "stockkat_alerts": [
+    {
+      "enabled": true,
+      "id": "a-lly-buy1080",
+      "note": "CANSLIM buy zone $1050-1080 pullback (RS 80, C+A strong)",
+      "symbol": "LLY",
+      "threshold": 1080,
+      "type": "price_below"
+    },
+    {
+      "enabled": true,
+      "id": "a-xom-exit",
+      "note": "Oil-regime exit signal - Hormuz de-escalation would unwind the premium",
+      "symbol": "XOM",
+      "threshold": 5,
+      "type": "pct_down"
+    },
+    {
+      "enabled": true,
+      "id": "a-cvx-exit",
+      "note": "Oil-regime exit signal - same as XOM",
+      "symbol": "CVX",
+      "threshold": 5,
+      "type": "pct_down"
+    },
+    {
+      "enabled": true,
+      "id": "a-msft-brk550",
+      "note": "Breakout add - 52w high ~554, EPS +39% YoY",
+      "symbol": "MSFT",
+      "threshold": 550,
+      "type": "price_above"
+    },
+    {
+      "enabled": true,
+      "id": "a-nvda-brk236",
+      "note": "Chip-base breakout confirmation - C=100 (+128% EPS), 52w high ~236.5",
+      "symbol": "NVDA",
+      "threshold": 236,
+      "type": "price_above"
+    },
+    {
+      "enabled": true,
+      "id": "a-aapl-brk344",
+      "note": "RS-80 leader new-high breakout - 52w high 344.57",
+      "symbol": "AAPL",
+      "threshold": 344,
+      "type": "price_above"
+    },
+    {
+      "enabled": true,
+      "id": "a-abbv-mom5",
+      "note": "RS-80 defensive leader momentum trigger",
+      "symbol": "ABBV",
+      "threshold": 5,
+      "type": "pct_up"
+    }
+  ],
+  "stockkat_analyses": {},
+  "stockkat_api_base": "http://localhost:5001",
+  "stockkat_chart_lines": {
+    "INTC": [
+      {
+        "id": "cl-1789656313494-pbfh",
+        "label": "Avg cost",
+        "price": 20.38
+      },
+      {
+        "id": "cl-1789656314710-251t",
+        "label": "Avg cost",
+        "price": 20.38
+      },
+      {
+        "id": "cl-1789656315254-057b",
+        "label": "52W high",
+        "price": 142.35
+      },
+      {
+        "id": "cl-1789656329958-duoq",
+        "label": "52W low",
+        "price": 28.73
+      }
+    ],
+    "NTSK": []
+  },
+  "stockkat_compare_selection": [],
+  "stockkat_discover_state": {
+    "activeId": "main",
+    "versions": [
+      {
+        "count": 3,
+        "id": "main",
+        "name": "Main",
+        "notes": "",
+        "saved": [],
+        "themes": [
+          "blue-chips-down",
+          "hidden-gems",
+          "dividends"
+        ]
+      },
+      {
+        "count": 4,
+        "id": "growth",
+        "name": "High Growth",
+        "notes": "",
+        "saved": [],
+        "themes": [
+          "high-growth",
+          "megatrend"
+        ]
+      },
+      {
+        "count": 4,
+        "id": "volatile",
+        "name": "High Volatile",
+        "notes": "",
+        "saved": [],
+        "themes": [
+          "high-volatility",
+          "turnaround"
+        ]
+      }
+    ]
+  },
+  "stockkat_etf_list": [
+    "SPY",
+    "QQQ",
+    "VOO",
+    "VTI",
+    "IVV",
+    "VEA",
+    "VWO",
+    "AGG",
+    "BND",
+    "GLD",
+    "IWM",
+    "EEM",
+    "EFA",
+    "IJR",
+    "VTV",
+    "VUG",
+    "SCHD",
+    "VIG",
+    "QQQM",
+    "RSP",
+    "DIA",
+    "XLK",
+    "XLF",
+    "XLE",
+    "XLV",
+    "XLY",
+    "XLP",
+    "XLI",
+    "XLB",
+    "XLRE"
+  ],
+  "stockkat_favorites": [
+    "TPG",
+    "LMB",
+    "DAVE",
+    "SEZL",
+    "GDDY",
+    "SGI",
+    "GSHD",
+    "NTSK",
+    "INTC",
+    "BA",
+    "ADBE",
+    "FISV",
+    "FIS",
+    "PYPL",
+    "DECK",
+    "INTU",
+    "LLY",
+    "XOM",
+    "CVX",
+    "MSFT",
+    "NVDA",
+    "AAPL",
+    "ABBV",
+    "BYRN",
+    "FORA",
+    "CTNT",
+    "MEDS",
+    "AEMD",
+    "LAC",
+    "MU",
+    "WDC",
+    "STX",
+    "SNDK",
+    "AVGO",
+    "AMD",
+    "NEM",
+    "GOLD",
+    "AMZN",
+    "GOOGL",
+    "META",
+    "JPM",
+    "BRK-B",
+    "JNJ",
+    "V",
+    "CSCO",
+    "WMT",
+    "PLTR",
+    "COST",
+    "MA",
+    "LRCX",
+    "BAC",
+    "TXN",
+    "PANW",
+    "MOG.A",
+    "FROG",
+    "UMBF",
+    "BTSG",
+    "FN",
+    "CRDO",
+    "ATI",
+    "AIT",
+    "FIX",
+    "CIEN",
+    "TWST",
+    "HUT",
+    "GKOS",
+    "VSAT",
+    "CYTK",
+    "TXG",
+    "FCFS",
+    "SM",
+    "ONB",
+    "KRYS",
+    "PTGX",
+    "EAT",
+    "CTRE",
+    "IDCC",
+    "RHP",
+    "MTCH",
+    "KMX",
+    "QRVO",
+    "EMN",
+    "JXN",
+    "CORT",
+    "PAYC",
+    "FORM",
+    "ALKS",
+    "ESI",
+    "TGTX",
+    "LNC",
+    "ACA",
+    "MATX",
+    "MSGS",
+    "TRNO",
+    "SNEX",
+    "INSW",
+    "OII",
+    "ANF",
+    "MTRN",
+    "LIVN",
+    "RAL",
+    "NFLX",
+    "QCOM",
+    "ADI",
+    "KLAC",
+    "MRVL",
+    "NXPI",
+    "SNPS",
+    "CDNS",
+    "CRWD",
+    "WDAY",
+    "ADSK",
+    "FTNT",
+    "DASH",
+    "ABNB",
+    "AXON",
+    "PEP",
+    "MDLZ",
+    "SBUX",
+    "MNST",
+    "KDP",
+    "CCEP",
+    "ORLY",
+    "ODFL",
+    "CMCSA",
+    "TMUS",
+    "AMGN",
+    "GILD",
+    "VRTX",
+    "ISRG",
+    "IDXX",
+    "DXCM",
+    "REGN",
+    "ADP",
+    "CSX",
+    "PCAR",
+    "FAST",
+    "CTAS",
+    "PAYX",
+    "VRSK",
+    "EXC",
+    "XEL",
+    "AEP",
+    "ALNY",
+    "ASML",
+    "BKNG",
+    "CPRT",
+    "LIN",
+    "ROP",
+    "MCHP",
+    "MPWR",
+    "MAR",
+    "ROST",
+    "TTWO",
+    "SHOP",
+    "DDOG",
+    "APP",
+    "GEHC",
+    "CEG",
+    "BKR",
+    "FANG",
+    "SPY",
+    "QQQ",
+    "VOO",
+    "VTI",
+    "IVV",
+    "VEA",
+    "VWO",
+    "AGG",
+    "GLD",
+    "IWM",
+    "EEM",
+    "EFA",
+    "IJR",
+    "VTV",
+    "VUG",
+    "SCHD",
+    "VIG",
+    "QQQM",
+    "RSP",
+    "DIA",
+    "XLK",
+    "XLF",
+    "XLE",
+    "XLV",
+    "XLY",
+    "XLP",
+    "XLI",
+    "XLB",
+    "XLRE"
+  ],
+  "stockkat_holdings": {
+    "BA": {
+      "avgCost": 171.34,
+      "shares": 3
+    },
+    "GEHC": {
+      "avgCost": 64.4,
+      "shares": 7
+    },
+    "GOOG": {
+      "avgCost": 281.33,
+      "shares": 1
+    },
+    "INTC": {
+      "avgCost": 62.4425,
+      "buys": [
+        {
+          "id": "buy-1793905547600-1jldv",
+          "price": 63.6486,
+          "shares": 35
+        },
+        {
+          "id": "buy-1793905547600-953r7",
+          "price": 54,
+          "shares": 5
+        }
+      ],
+      "shares": 40
+    },
+    "LAC": {
+      "avgCost": 3,
+      "shares": 100
+    },
+    "NKE": {
+      "avgCost": 38.74,
+      "shares": 10
+    },
+    "NVDA": {
+      "avgCost": 183,
+      "shares": 5
+    },
+    "SPCX": {
+      "avgCost": 117.64,
+      "shares": 5
+    },
+    "TSLA": {
+      "avgCost": 172.79,
+      "shares": 2
+    },
+    "VFV.TO": {
+      "avgCost": 189.07,
+      "shares": 20
+    }
+  },
+  "stockkat_lab_state": {
+    "activeStrategy": "value",
+    "basket": [],
+    "depth": "quick",
+    "fieldsBySymbol": {},
+    "globalNotes": "",
+    "resultsByStrategy": {},
+    "screenerResult": ""
+  },
+  "stockkat_last_quotes": [
+    {
+      "change": 0.6849999999999987,
+      "changePercent": 3.2159624413145482,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 26.71,
+      "fiftyTwoWeekLow": 7.665,
+      "high": 22.145,
+      "low": 21.15,
+      "name": "Netskope, Inc.",
+      "open": 21.985,
+      "peRatio": null,
+      "previousClose": 21.3,
+      "price": 21.985,
+      "symbol": "NTSK",
+      "volume": 451752
+    },
+    {
+      "change": 2.4239999999999995,
+      "changePercent": 4.307036247334754,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 142.35,
+      "fiftyTwoWeekLow": 32.89,
+      "high": 58.93,
+      "low": 55.83,
+      "name": "Intel Corporation",
+      "open": 58.704,
+      "peRatio": null,
+      "previousClose": 56.28,
+      "price": 58.704,
+      "symbol": "INTC",
+      "volume": 39540754
+    },
+    {
+      "change": 0.9950000000000045,
+      "changePercent": 0.5738177623990799,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 254.35,
+      "fiftyTwoWeekLow": 165.01,
+      "high": 177.39,
+      "low": 173.81,
+      "name": "The Boeing Company",
+      "open": 174.395,
+      "peRatio": 17.997421,
+      "previousClose": 173.4,
+      "price": 174.395,
+      "symbol": "BA",
+      "volume": 1456289
+    },
+    {
+      "change": 17.94999999999999,
+      "changePercent": 5.010887164312431,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 498.83,
+      "fiftyTwoWeekLow": 297.38,
+      "high": 376.76,
+      "low": 360.02,
+      "name": "Tesla, Inc.",
+      "open": 376.17,
+      "peRatio": 413.011,
+      "previousClose": 358.22,
+      "price": 376.17,
+      "symbol": "TSLA",
+      "volume": 5345197
+    },
+    {
+      "change": 7.810000000000002,
+      "changePercent": 5.816638117226485,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 225.64,
+      "fiftyTwoWeekLow": 104.83,
+      "high": 143.2,
+      "low": 135.37,
+      "name": "Space Exploration Technologies Corp.",
+      "open": 142.08,
+      "peRatio": 617.73914,
+      "previousClose": 134.27,
+      "price": 142.08,
+      "symbol": "SPCX",
+      "volume": 38212604
+    },
+    {
+      "change": -0.37999999999999545,
+      "changePercent": -0.4612770089827573,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 89.77,
+      "fiftyTwoWeekLow": 58.75,
+      "high": 83.24,
+      "low": 81.76,
+      "name": "GE HealthCare Technologies Inc.",
+      "open": 82,
+      "peRatio": 17.336153,
+      "previousClose": 82.38,
+      "price": 82,
+      "symbol": "GEHC",
+      "volume": 551116
+    },
+    {
+      "change": 0.8149999999999977,
+      "changePercent": 2.111946100025907,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 69.14,
+      "fiftyTwoWeekLow": 31.97,
+      "high": 39.42,
+      "low": 38.6,
+      "name": "NIKE, Inc.",
+      "open": 39.405,
+      "peRatio": 18.944712,
+      "previousClose": 38.59,
+      "price": 39.405,
+      "symbol": "NKE",
+      "volume": 4111855
+    },
+    {
+      "change": -0.41999999999999993,
+      "changePercent": -10.096153846153843,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 20.69,
+      "fiftyTwoWeekLow": 3.17,
+      "high": 4.231,
+      "low": 3.675,
+      "name": "Byrna Technologies Inc.",
+      "open": 3.74,
+      "peRatio": null,
+      "previousClose": 4.16,
+      "price": 3.74,
+      "symbol": "BYRN",
+      "volume": 303730
+    },
+    {
+      "change": -0.42999999999999994,
+      "changePercent": -21.078431372549016,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 63600,
+      "fiftyTwoWeekLow": 1.6,
+      "high": 2,
+      "low": 1.6,
+      "name": "Cheetah Net Supply Chain Service Inc.",
+      "open": 1.61,
+      "peRatio": null,
+      "previousClose": 2.04,
+      "price": 1.61,
+      "symbol": "CTNT",
+      "volume": 107053
+    },
+    {
+      "change": -0.27,
+      "changePercent": -18.120805369127517,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 35.5,
+      "fiftyTwoWeekLow": 0.823,
+      "high": 1.61,
+      "low": 1.14,
+      "name": "DataMEDS AI, Inc.",
+      "open": 1.22,
+      "peRatio": null,
+      "previousClose": 1.49,
+      "price": 1.22,
+      "symbol": "MEDS",
+      "volume": 476929
+    },
+    {
+      "change": -0.4400000000000004,
+      "changePercent": -7.652173913043485,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 25.65,
+      "fiftyTwoWeekLow": 1.41,
+      "high": 5.72,
+      "low": 5.31,
+      "name": "Aethlon Medical, Inc.",
+      "open": 5.31,
+      "peRatio": null,
+      "previousClose": 5.75,
+      "price": 5.31,
+      "symbol": "AEMD",
+      "volume": 12246
+    },
+    {
+      "change": 0.040000000000000036,
+      "changePercent": 2.072538860103629,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 6.96,
+      "fiftyTwoWeekLow": 1.775,
+      "high": 1.98,
+      "low": 1.92,
+      "name": "Lithium Americas Corp.",
+      "open": 1.97,
+      "peRatio": null,
+      "previousClose": 1.93,
+      "price": 1.97,
+      "symbol": "LAC",
+      "volume": 1784483
+    },
+    {
+      "change": -11.719999999999999,
+      "changePercent": -13.574241371322676,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 105.76,
+      "fiftyTwoWeekLow": 34.05,
+      "high": 84.65,
+      "low": 73.975,
+      "name": "JFrog Ltd.",
+      "open": 74.62,
+      "peRatio": null,
+      "previousClose": 86.34,
+      "price": 74.62,
+      "symbol": "FROG",
+      "volume": 5111786
+    },
+    {
+      "change": -3.8100000000000023,
+      "changePercent": -2.7507039202945656,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 153.32,
+      "fiftyTwoWeekLow": 103.38,
+      "high": 142.32,
+      "low": 133.835,
+      "name": "UMB Financial Corporation",
+      "open": 134.7,
+      "peRatio": 10.189107,
+      "previousClose": 138.51,
+      "price": 134.7,
+      "symbol": "UMBF",
+      "volume": 572988
+    },
+    {
+      "change": -3.9399999999999977,
+      "changePercent": -5.644699140401143,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 73.75,
+      "fiftyTwoWeekLow": 30.64,
+      "high": 70.44,
+      "low": 65.675,
+      "name": "BrightSpring Health Services, Inc.",
+      "open": 65.86,
+      "peRatio": 46.70922,
+      "previousClose": 69.8,
+      "price": 65.86,
+      "symbol": "BTSG",
+      "volume": 3593925
+    },
+    {
+      "change": -48.66999999999996,
+      "changePercent": -14.245989930921427,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 748.89,
+      "fiftyTwoWeekLow": 286.07,
+      "high": 322.9,
+      "low": 286.07,
+      "name": "Fabrinet",
+      "open": 292.97,
+      "peRatio": 22.110943,
+      "previousClose": 341.64,
+      "price": 292.97,
+      "symbol": "FN",
+      "volume": 2019819
+    },
+    {
+      "change": -24.17,
+      "changePercent": -17.706959706959708,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 308.67,
+      "fiftyTwoWeekLow": 86.485,
+      "high": 130,
+      "low": 110.845,
+      "name": "Credo Technology Group Holding Ltd",
+      "open": 112.33,
+      "peRatio": 39.833336,
+      "previousClose": 136.5,
+      "price": 112.33,
+      "symbol": "CRDO",
+      "volume": 16586156
+    },
+    {
+      "change": -10.75,
+      "changePercent": -6.002568540957061,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 243.57,
+      "fiftyTwoWeekLow": 93.11,
+      "high": 181.76,
+      "low": 164.945,
+      "name": "ATI Inc.",
+      "open": 168.34,
+      "peRatio": 42.085,
+      "previousClose": 179.09,
+      "price": 168.34,
+      "symbol": "ATI",
+      "volume": 2453074
+    },
+    {
+      "change": -17.390000000000043,
+      "changePercent": -5.8298970800228105,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 374.8,
+      "fiftyTwoWeekLow": 238.72,
+      "high": 299.46,
+      "low": 280.69,
+      "name": "Applied Industrial Technologies, Inc.",
+      "open": 280.9,
+      "peRatio": 24.880424,
+      "previousClose": 298.29,
+      "price": 280.9,
+      "symbol": "AIT",
+      "volume": 293158
+    },
+    {
+      "change": -126.36999999999989,
+      "changePercent": -11.579661141197267,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 2073.99,
+      "fiftyTwoWeekLow": 841.66,
+      "high": 1036.415,
+      "low": 945.01,
+      "name": "Comfort Systems USA, Inc.",
+      "open": 964.94,
+      "peRatio": 20.841038,
+      "previousClose": 1091.31,
+      "price": 964.94,
+      "symbol": "FIX",
+      "volume": 1730218
+    },
+    {
+      "change": -41.43000000000001,
+      "changePercent": -15.218189832500736,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 637.51,
+      "fiftyTwoWeekLow": 168.22,
+      "high": 257.505,
+      "low": 225.57,
+      "name": "Ciena Corporation",
+      "open": 230.81,
+      "peRatio": 51.63535,
+      "previousClose": 272.24,
+      "price": 230.81,
+      "symbol": "CIEN",
+      "volume": 6211685
+    },
+    {
+      "change": -21.970000000000013,
+      "changePercent": -15.408893252910655,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 219.71,
+      "fiftyTwoWeekLow": 23.3,
+      "high": 134.975,
+      "low": 118.6,
+      "name": "Twist Bioscience Corporation",
+      "open": 120.61,
+      "peRatio": null,
+      "previousClose": 142.58,
+      "price": 120.61,
+      "symbol": "TWST",
+      "volume": 3084091
+    },
+    {
+      "change": -2.989999999999995,
+      "changePercent": -6.109521863506324,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 140.8,
+      "fiftyTwoWeekLow": 31.67,
+      "high": 49.015,
+      "low": 42.195,
+      "name": "Hut 8 Corp.",
+      "open": 45.95,
+      "peRatio": null,
+      "previousClose": 48.94,
+      "price": 45.95,
+      "symbol": "HUT",
+      "volume": 12220949
+    },
+    {
+      "change": -26.72,
+      "changePercent": -10.830968788001622,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 255.185,
+      "fiftyTwoWeekLow": 80.905,
+      "high": 250.4,
+      "low": 218.765,
+      "name": "Glaukos Corporation",
+      "open": 219.98,
+      "peRatio": null,
+      "previousClose": 246.7,
+      "price": 219.98,
+      "symbol": "GKOS",
+      "volume": 2041501
+    },
+    {
+      "change": -7.410000000000004,
+      "changePercent": -11.094475220841447,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 93.03,
+      "fiftyTwoWeekLow": 29.13,
+      "high": 65.9,
+      "low": 57.38,
+      "name": "Viasat, Inc.",
+      "open": 59.38,
+      "peRatio": null,
+      "previousClose": 66.79,
+      "price": 59.38,
+      "symbol": "VSAT",
+      "volume": 4283471
+    },
+    {
+      "change": -8.050000000000004,
+      "changePercent": -12.65723270440252,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 88.31,
+      "fiftyTwoWeekLow": 54.16,
+      "high": 60.84,
+      "low": 54.16,
+      "name": "Cytokinetics, Incorporated",
+      "open": 55.55,
+      "peRatio": null,
+      "previousClose": 63.6,
+      "price": 55.55,
+      "symbol": "CYTK",
+      "volume": 6774495
+    },
+    {
+      "change": -9.459999999999994,
+      "changePercent": -14.010663507108998,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 102.81,
+      "fiftyTwoWeekLow": 12.8,
+      "high": 63.395,
+      "low": 57.19,
+      "name": "10x Genomics, Inc.",
+      "open": 58.06,
+      "peRatio": null,
+      "previousClose": 67.52,
+      "price": 58.06,
+      "symbol": "TXG",
+      "volume": 5952384
+    },
+    {
+      "change": -5.789999999999992,
+      "changePercent": -2.9947243198510356,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 238.93,
+      "fiftyTwoWeekLow": 146.95,
+      "high": 196.32,
+      "low": 185.47,
+      "name": "FirstCash Holdings, Inc.",
+      "open": 187.55,
+      "peRatio": 20.29762,
+      "previousClose": 193.34,
+      "price": 187.55,
+      "symbol": "FCFS",
+      "volume": 375810
+    },
+    {
+      "change": -1.4299999999999997,
+      "changePercent": -4.60399227301996,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 41.56,
+      "fiftyTwoWeekLow": 17.45,
+      "high": 32.4,
+      "low": 29.62,
+      "name": "SM Energy Company",
+      "open": 29.63,
+      "peRatio": 6.4273314,
+      "previousClose": 31.06,
+      "price": 29.63,
+      "symbol": "SM",
+      "volume": 6384525
+    },
+    {
+      "change": -0.8399999999999999,
+      "changePercent": -3.2444959443800685,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 27.36,
+      "fiftyTwoWeekLow": 19.6,
+      "high": 26.56,
+      "low": 24.99,
+      "name": "Old National Bancorp",
+      "open": 25.05,
+      "peRatio": 10.182926,
+      "previousClose": 25.89,
+      "price": 25.05,
+      "symbol": "ONB",
+      "volume": 3938883
+    },
+    {
+      "change": -10.589999999999975,
+      "changePercent": -3.406897439197007,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 382.535,
+      "fiftyTwoWeekLow": 192.52,
+      "high": 314.24,
+      "low": 299.635,
+      "name": "Krystal Biotech, Inc.",
+      "open": 300.25,
+      "peRatio": 40.794838,
+      "previousClose": 310.84,
+      "price": 300.25,
+      "symbol": "KRYS",
+      "volume": 400881
+    },
+    {
+      "change": -8.110000000000014,
+      "changePercent": -5.656692474018284,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 160.81,
+      "fiftyTwoWeekLow": 76.7,
+      "high": 143.3,
+      "low": 134.39,
+      "name": "Protagonist Therapeutics, Inc.",
+      "open": 135.26,
+      "peRatio": 131.32039,
+      "previousClose": 143.37,
+      "price": 135.26,
+      "symbol": "PTGX",
+      "volume": 582605
+    },
+    {
+      "change": -7.780000000000001,
+      "changePercent": -3.529305026311015,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 254.99,
+      "fiftyTwoWeekLow": 100.3,
+      "high": 225.39,
+      "low": 209.06,
+      "name": "Brinker International, Inc.",
+      "open": 212.66,
+      "peRatio": 18.753086,
+      "previousClose": 220.44,
+      "price": 212.66,
+      "symbol": "EAT",
+      "volume": 1146405
+    },
+    {
+      "change": -0.7700000000000031,
+      "changePercent": -2.028985507246385,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 43.62,
+      "fiftyTwoWeekLow": 34.55,
+      "high": 38.27,
+      "low": 37.01,
+      "name": "CareTrust REIT, Inc.",
+      "open": 37.18,
+      "peRatio": 23.2375,
+      "previousClose": 37.95,
+      "price": 37.18,
+      "symbol": "CTRE",
+      "volume": 2266917
+    },
+    {
+      "change": -21.970000000000027,
+      "changePercent": -7.121555915721241,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 387.3,
+      "fiftyTwoWeekLow": 249.14,
+      "high": 307.38,
+      "low": 284.86,
+      "name": "InterDigital, Inc.",
+      "open": 286.53,
+      "peRatio": 31.907574,
+      "previousClose": 308.5,
+      "price": 286.53,
+      "symbol": "IDCC",
+      "volume": 250769
+    },
+    {
+      "change": -4.700000000000017,
+      "changePercent": -3.4465058297279585,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 137.46,
+      "fiftyTwoWeekLow": 89.6,
+      "high": 136.74,
+      "low": 131.25,
+      "name": "Ryman Hospitality Properties, Inc.",
+      "open": 131.67,
+      "peRatio": 31.958738,
+      "previousClose": 136.37,
+      "price": 131.67,
+      "symbol": "RHP",
+      "volume": 711228
+    },
+    {
+      "change": -1.0500000000000043,
+      "changePercent": -2.6112907237005825,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 46.67,
+      "fiftyTwoWeekLow": 28.81,
+      "high": 40.515,
+      "low": 38.75,
+      "name": "Match Group, Inc.",
+      "open": 39.16,
+      "peRatio": 13.365188,
+      "previousClose": 40.21,
+      "price": 39.16,
+      "symbol": "MTCH",
+      "volume": 4425894
+    },
+    {
+      "change": -2.539999999999999,
+      "changePercent": -4.606456293072178,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 65.28,
+      "fiftyTwoWeekLow": 30.26,
+      "high": 55.8,
+      "low": 52.35,
+      "name": "CarMax, Inc.",
+      "open": 52.6,
+      "peRatio": 24.928911,
+      "previousClose": 55.14,
+      "price": 52.6,
+      "symbol": "KMX",
+      "volume": 2068176
+    },
+    {
+      "change": 0,
+      "changePercent": 0,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 121.09,
+      "fiftyTwoWeekLow": 74.92,
+      "high": 115.62,
+      "low": 111.22,
+      "name": "Qorvo, Inc.",
+      "open": 114.17,
+      "peRatio": 26.48956,
+      "previousClose": 114.17,
+      "price": 114.17,
+      "symbol": "QRVO",
+      "volume": 8341594
+    },
+    {
+      "change": -1.9000000000000057,
+      "changePercent": -2.8102351723117964,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 83.47,
+      "fiftyTwoWeekLow": 56.11,
+      "high": 68.4,
+      "low": 64.87,
+      "name": "Eastman Chemical Company",
+      "open": 65.71,
+      "peRatio": 11.692171,
+      "previousClose": 67.61,
+      "price": 65.71,
+      "symbol": "EMN",
+      "volume": 1423670
+    },
+    {
+      "change": -4.6200000000000045,
+      "changePercent": -3.3636694575901016,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 150,
+      "fiftyTwoWeekLow": 89.67,
+      "high": 141.18,
+      "low": 131.09,
+      "name": "Jackson Financial Inc.",
+      "open": 132.73,
+      "peRatio": 10.897372,
+      "previousClose": 137.35,
+      "price": 132.73,
+      "symbol": "JXN",
+      "volume": 860426
+    },
+    {
+      "change": -7.590000000000003,
+      "changePercent": -9.580913910628635,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 126.38,
+      "fiftyTwoWeekLow": 28.66,
+      "high": 78.98,
+      "low": 71.515,
+      "name": "Corcept Therapeutics Incorporated",
+      "open": 71.63,
+      "peRatio": 53.85714,
+      "previousClose": 79.22,
+      "price": 71.63,
+      "symbol": "CORT",
+      "volume": 1507436
+    },
+    {
+      "change": -18.140000000000015,
+      "changePercent": -6.764618138424826,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 275.22,
+      "fiftyTwoWeekLow": 104.9,
+      "high": 265.358,
+      "low": 233.01,
+      "name": "Paycom Software, Inc.",
+      "open": 250.02,
+      "peRatio": 26.457144,
+      "previousClose": 268.16,
+      "price": 250.02,
+      "symbol": "PAYC",
+      "volume": 1713736
+    },
+    {
+      "change": -13.47999999999999,
+      "changePercent": -15.814171750351935,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 160.27,
+      "fiftyTwoWeekLow": 47.33,
+      "high": 80.23,
+      "low": 69.88,
+      "name": "FormFactor, Inc.",
+      "open": 71.76,
+      "peRatio": 32.91743,
+      "previousClose": 85.24,
+      "price": 71.76,
+      "symbol": "FORM",
+      "volume": 2615289
+    },
+    {
+      "change": -1.3500000000000014,
+      "changePercent": -2.9418173894094606,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 55.67,
+      "fiftyTwoWeekLow": 27,
+      "high": 46.55,
+      "low": 44.415,
+      "name": "Alkermes plc",
+      "open": 44.54,
+      "peRatio": null,
+      "previousClose": 45.89,
+      "price": 44.54,
+      "symbol": "ALKS",
+      "volume": 1943981
+    },
+    {
+      "change": -2.679999999999996,
+      "changePercent": -8.014354066985636,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 49.25,
+      "fiftyTwoWeekLow": 22.86,
+      "high": 33.21,
+      "low": 30.53,
+      "name": "Element Solutions Inc",
+      "open": 30.76,
+      "peRatio": 36.188236,
+      "previousClose": 33.44,
+      "price": 30.76,
+      "symbol": "ESI",
+      "volume": 6723419
+    },
+    {
+      "change": -3.6500000000000057,
+      "changePercent": -5.922440369949709,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 63.6,
+      "fiftyTwoWeekLow": 26.76,
+      "high": 61.585,
+      "low": 57.82,
+      "name": "TG Therapeutics, Inc.",
+      "open": 57.98,
+      "peRatio": 21.083635,
+      "previousClose": 61.63,
+      "price": 57.98,
+      "symbol": "TGTX",
+      "volume": 2109315
+    },
+    {
+      "change": -2.440000000000005,
+      "changePercent": -5.8653846153846265,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 47.67,
+      "fiftyTwoWeekLow": 32.18,
+      "high": 41.86,
+      "low": 38.95,
+      "name": "Lincoln National Corporation",
+      "open": 39.16,
+      "peRatio": 3.3384485,
+      "previousClose": 41.6,
+      "price": 39.16,
+      "symbol": "LNC",
+      "volume": 3672345
+    },
+    {
+      "change": 0.12000000000000455,
+      "changePercent": 0.08052070053009766,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 149.21,
+      "fiftyTwoWeekLow": 92.86,
+      "high": 149.21,
+      "low": 148.92,
+      "name": "Arcosa Inc",
+      "open": 149.15,
+      "peRatio": 36.827156,
+      "previousClose": 149.03,
+      "price": 149.15,
+      "symbol": "ACA",
+      "volume": 875023
+    },
+    {
+      "change": 2.8100000000000023,
+      "changePercent": 1.331374964465082,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 240.87,
+      "fiftyTwoWeekLow": 101.98,
+      "high": 232.82,
+      "low": 212.82,
+      "name": "Matson, Inc.",
+      "open": 213.87,
+      "peRatio": 14.382649,
+      "previousClose": 211.06,
+      "price": 213.87,
+      "symbol": "MATX",
+      "volume": 448484
+    },
+    {
+      "change": -4.240000000000009,
+      "changePercent": -1.0910120165710337,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 392.56,
+      "fiftyTwoWeekLow": 158.81,
+      "high": 392.56,
+      "low": 383.11,
+      "name": "Madison Square Garden Sports Corp",
+      "open": 384.39,
+      "peRatio": 1201.2189,
+      "previousClose": 388.63,
+      "price": 384.39,
+      "symbol": "MSGS",
+      "volume": 261286
+    },
+    {
+      "change": -0.8999999999999915,
+      "changePercent": -1.323724077070145,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 78.94,
+      "fiftyTwoWeekLow": 57.95,
+      "high": 68.99,
+      "low": 66.33,
+      "name": "Terreno Realty Corporation",
+      "open": 67.09,
+      "peRatio": 18.034945,
+      "previousClose": 67.99,
+      "price": 67.09,
+      "symbol": "TRNO",
+      "volume": 887522
+    },
+    {
+      "change": -3.210000000000001,
+      "changePercent": -5.648425127573466,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 94.66,
+      "fiftyTwoWeekLow": 36.449,
+      "high": 57.91,
+      "low": 53.44,
+      "name": "StoneX Group Inc.",
+      "open": 53.62,
+      "peRatio": 17.754967,
+      "previousClose": 56.83,
+      "price": 53.62,
+      "symbol": "SNEX",
+      "volume": 804347
+    },
+    {
+      "change": -4.890000000000001,
+      "changePercent": -4.921497584541063,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 126.274,
+      "fiftyTwoWeekLow": 46.09,
+      "high": 99.975,
+      "low": 94.18,
+      "name": "International Seaways, Inc.",
+      "open": 94.47,
+      "peRatio": 6.0402813,
+      "previousClose": 99.36,
+      "price": 94.47,
+      "symbol": "INSW",
+      "volume": 945221
+    },
+    {
+      "change": -2.3599999999999994,
+      "changePercent": -6.485298158834843,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 54.25,
+      "fiftyTwoWeekLow": 22.13,
+      "high": 36.62,
+      "low": 33.925,
+      "name": "Oceaneering International, Inc.",
+      "open": 34.03,
+      "peRatio": 10.375,
+      "previousClose": 36.39,
+      "price": 34.03,
+      "symbol": "OII",
+      "volume": 1017181
+    },
+    {
+      "change": -13.5,
+      "changePercent": -7.890583903208838,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 171.996,
+      "fiftyTwoWeekLow": 65.45,
+      "high": 171.996,
+      "low": 157.26,
+      "name": "Abercrombie & Fitch Co.",
+      "open": 157.59,
+      "peRatio": 13.6088085,
+      "previousClose": 171.09,
+      "price": 157.59,
+      "symbol": "ANF",
+      "volume": 1248243
+    },
+    {
+      "change": -9.789999999999992,
+      "changePercent": -5.228025205596492,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 324.99,
+      "fiftyTwoWeekLow": 110.69,
+      "high": 192.534,
+      "low": 173.89,
+      "name": "Materion Corporation",
+      "open": 177.47,
+      "peRatio": 36.366802,
+      "previousClose": 187.26,
+      "price": 177.47,
+      "symbol": "MTRN",
+      "volume": 405546
+    },
+    {
+      "change": -3.049999999999997,
+      "changePercent": -3.2381356831935424,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 99.38,
+      "fiftyTwoWeekLow": 48.82,
+      "high": 94.22,
+      "low": 88.81,
+      "name": "LivaNova PLC",
+      "open": 91.14,
+      "peRatio": 26.114613,
+      "previousClose": 94.19,
+      "price": 91.14,
+      "symbol": "LIVN",
+      "volume": 1242578
+    },
+    {
+      "change": -8.75,
+      "changePercent": -12.224084939927355,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 75.41,
+      "fiftyTwoWeekLow": 37.27,
+      "high": 70.41,
+      "low": 61.65,
+      "name": "Ralliant Corporation",
+      "open": 62.83,
+      "peRatio": null,
+      "previousClose": 71.58,
+      "price": 62.83,
+      "symbol": "RAL",
+      "volume": 3089760
+    },
+    {
+      "change": -53.25999999999999,
+      "changePercent": -3.756020846409353,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 1453,
+      "fiftyTwoWeekLow": 850.51,
+      "high": 1453,
+      "low": 1364.73,
+      "name": "Eli Lilly and Company",
+      "open": 1364.73,
+      "peRatio": 44.295033,
+      "previousClose": 1417.99,
+      "price": 1364.73,
+      "symbol": "LLY",
+      "volume": 4758189
+    },
+    {
+      "change": -3.969999999999999,
+      "changePercent": -2.3453653925680857,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 188.5,
+      "fiftyTwoWeekLow": 113.64,
+      "high": 173.67,
+      "low": 165.23,
+      "name": "ExxonMobil Holdings Corporation",
+      "open": 165.3,
+      "peRatio": 17.006172,
+      "previousClose": 169.27,
+      "price": 165.3,
+      "symbol": "XOM",
+      "volume": 18743712
+    },
+    {
+      "change": -4.030000000000001,
+      "changePercent": -1.8574852507374635,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 236.48,
+      "fiftyTwoWeekLow": 146.49,
+      "high": 222.45,
+      "low": 212.61,
+      "name": "Chevron Corporation",
+      "open": 212.93,
+      "peRatio": 15.633627,
+      "previousClose": 216.96,
+      "price": 212.93,
+      "symbol": "CVX",
+      "volume": 10169700
+    },
+    {
+      "change": -6.589999999999975,
+      "changePercent": -2.235186378591044,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 302.93,
+      "fiftyTwoWeekLow": 190.75,
+      "high": 302.93,
+      "low": 287.73,
+      "name": "AbbVie Inc.",
+      "open": 288.24,
+      "peRatio": 49.52577,
+      "previousClose": 294.83,
+      "price": 288.24,
+      "symbol": "ABBV",
+      "volume": 7881739
+    },
+    {
+      "change": 1.3700000000000045,
+      "changePercent": 0.40117130307467186,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 682.27,
+      "fiftyTwoWeekLow": 252.84,
+      "high": 343.87,
+      "low": 338.08,
+      "name": "Intuit Inc.",
+      "open": 342.87,
+      "peRatio": 20.821386,
+      "previousClose": 341.5,
+      "price": 342.87,
+      "symbol": "INTU",
+      "volume": 141854
+    },
+    {
+      "change": 0.18899999999999295,
+      "changePercent": 0.07898035938152652,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 362.71,
+      "fiftyTwoWeekLow": 190.12,
+      "high": 239.53,
+      "low": 236.55,
+      "name": "Adobe Inc.",
+      "open": 239.489,
+      "peRatio": 13.386924,
+      "previousClose": 239.3,
+      "price": 239.489,
+      "symbol": "ADBE",
+      "volume": 256158
+    },
+    {
+      "change": 0.7999999999999972,
+      "changePercent": 1.3504388926401032,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 67.99,
+      "fiftyTwoWeekLow": 38.46,
+      "high": 60.18,
+      "low": 59.66,
+      "name": "PayPal Holdings, Inc.",
+      "open": 60.04,
+      "peRatio": 11.458016,
+      "previousClose": 59.24,
+      "price": 60.04,
+      "symbol": "PYPL",
+      "volume": 900020
+    },
+    {
+      "change": 12.600000000000023,
+      "changePercent": 2.3746254311075976,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 559.15,
+      "fiftyTwoWeekLow": 349.2,
+      "high": 547.48,
+      "low": 542.07,
+      "name": "Microsoft Corporation",
+      "open": 543.21,
+      "peRatio": 28.35595,
+      "previousClose": 530.61,
+      "price": 543.21,
+      "symbol": "MSFT",
+      "volume": 2962518
+    },
+    {
+      "change": -7.454999999999984,
+      "changePercent": -3.9943206172310246,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 243.37,
+      "fiftyTwoWeekLow": 164.27,
+      "high": 179.78,
+      "low": 170.24,
+      "name": "NVIDIA Corporation",
+      "open": 179.185,
+      "peRatio": 22.651075,
+      "previousClose": 186.64,
+      "price": 179.185,
+      "symbol": "NVDA",
+      "volume": 179366835
+    },
+    {
+      "change": 6.509999999999991,
+      "changePercent": 1.9014516458801853,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 355.38,
+      "fiftyTwoWeekLow": 243.42,
+      "high": 350.335,
+      "low": 344.78,
+      "name": "Apple Inc.",
+      "open": 348.88,
+      "peRatio": 38.85078,
+      "previousClose": 342.37,
+      "price": 348.88,
+      "symbol": "AAPL",
+      "volume": 4425242
+    },
+    {
+      "change": 20.809999999999945,
+      "changePercent": 3.0159420289854992,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 1255,
+      "fiftyTwoWeekLow": 192.59,
+      "high": 711.55,
+      "low": 689.65,
+      "name": "Micron Technology, Inc.",
+      "open": 710.81,
+      "peRatio": 9.562155,
+      "previousClose": 690,
+      "price": 710.81,
+      "symbol": "MU",
+      "volume": 4813024
+    },
+    {
+      "change": 20.54000000000002,
+      "changePercent": 7.786792023656086,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 799.87,
+      "fiftyTwoWeekLow": 132.43,
+      "high": 284.769,
+      "low": 269.872,
+      "name": "Western Digital Corporation",
+      "open": 284.32,
+      "peRatio": 10.000704,
+      "previousClose": 263.78,
+      "price": 284.32,
+      "symbol": "WDC",
+      "volume": 1019426
+    },
+    {
+      "change": 32.50999999999999,
+      "changePercent": 7.0522137139634244,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 1145,
+      "fiftyTwoWeekLow": 228.61,
+      "high": 494,
+      "low": 466.16,
+      "name": "Seagate Technology Holdings plc",
+      "open": 493.5,
+      "peRatio": 25.878344,
+      "previousClose": 460.99,
+      "price": 493.5,
+      "symbol": "STX",
+      "volume": 448854
+    },
+    {
+      "change": 41.70500000000004,
+      "changePercent": 4.994251910042397,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 2354.39,
+      "fiftyTwoWeekLow": 183,
+      "high": 879.5,
+      "low": 830.644,
+      "name": "Sandisk Corporation",
+      "open": 876.765,
+      "peRatio": 7.0159845,
+      "previousClose": 835.06,
+      "price": 876.765,
+      "symbol": "SNDK",
+      "volume": 2558161
+    },
+    {
+      "change": 18.194999999999993,
+      "changePercent": 6.195307977799718,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 495,
+      "fiftyTwoWeekLow": 289.77,
+      "high": 313.62,
+      "low": 304.292,
+      "name": "Broadcom Inc.",
+      "open": 311.885,
+      "peRatio": 39.832058,
+      "previousClose": 293.69,
+      "price": 311.885,
+      "symbol": "AVGO",
+      "volume": 5306758
+    },
+    {
+      "change": 33.599999999999966,
+      "changePercent": 7.482629609834306,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 658.52,
+      "fiftyTwoWeekLow": 188.22,
+      "high": 483,
+      "low": 468.21,
+      "name": "Advanced Micro Devices, Inc.",
+      "open": 482.64,
+      "peRatio": 103.12821,
+      "previousClose": 449.04,
+      "price": 482.64,
+      "symbol": "AMD",
+      "volume": 8321525
+    },
+    {
+      "change": 14.404999999999973,
+      "changePercent": 5.5553413035094374,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 287.2,
+      "fiftyTwoWeekLow": 196,
+      "high": 275.27,
+      "low": 269.32,
+      "name": "Amazon.com, Inc.",
+      "open": 273.705,
+      "peRatio": 22.128134,
+      "previousClose": 259.3,
+      "price": 273.705,
+      "symbol": "AMZN",
+      "volume": 10142714
+    },
+    {
+      "change": 9.765000000000043,
+      "changePercent": 3.428962708055357,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 408.61,
+      "fiftyTwoWeekLow": 270.7,
+      "high": 296.33,
+      "low": 291.721,
+      "name": "Alphabet Inc.",
+      "open": 294.545,
+      "peRatio": 15.385901,
+      "previousClose": 284.78,
+      "price": 294.545,
+      "symbol": "GOOGL",
+      "volume": 6846113
+    },
+    {
+      "change": 32.74000000000001,
+      "changePercent": 5.365893632713268,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 779.82,
+      "fiftyTwoWeekLow": 520.26,
+      "high": 644.54,
+      "low": 630,
+      "name": "Meta Platforms, Inc.",
+      "open": 642.89,
+      "peRatio": 21.935858,
+      "previousClose": 610.15,
+      "price": 642.89,
+      "symbol": "META",
+      "volume": 3085131
+    },
+    {
+      "change": 3.2900000000000063,
+      "changePercent": 3.50559403303144,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 130.37,
+      "fiftyTwoWeekLow": 71.1,
+      "high": 97.17,
+      "low": 94.97,
+      "name": "Cisco Systems, Inc.",
+      "open": 97.14,
+      "peRatio": 29.171171,
+      "previousClose": 93.85,
+      "price": 97.14,
+      "symbol": "CSCO",
+      "volume": 1743515
+    },
+    {
+      "change": -0.9849999999999994,
+      "changePercent": -0.7847355003186739,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 135.16,
+      "fiftyTwoWeekLow": 98.88,
+      "high": 124.88,
+      "low": 123.575,
+      "name": "Walmart Inc.",
+      "open": 124.535,
+      "peRatio": 45.177536,
+      "previousClose": 125.52,
+      "price": 124.535,
+      "symbol": "WMT",
+      "volume": 2762229
+    },
+    {
+      "change": 6.215000000000003,
+      "changePercent": 3.8751714677640625,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 212.94,
+      "fiftyTwoWeekLow": 106.37,
+      "high": 166.98,
+      "low": 161.05,
+      "name": "Palantir Technologies Inc.",
+      "open": 166.595,
+      "peRatio": 117.32043,
+      "previousClose": 160.38,
+      "price": 166.595,
+      "symbol": "PLTR",
+      "volume": 3170136
+    },
+    {
+      "change": -3.375,
+      "changePercent": -0.32034245795208627,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 1096.5,
+      "fiftyTwoWeekLow": 844.06,
+      "high": 1053.71,
+      "low": 1045.73,
+      "name": "Costco Wholesale Corporation",
+      "open": 1050.185,
+      "peRatio": 50.58695,
+      "previousClose": 1053.56,
+      "price": 1050.185,
+      "symbol": "COST",
+      "volume": 127135
+    },
+    {
+      "change": 11.349999999999994,
+      "changePercent": 5.662542406705246,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 438.5,
+      "fiftyTwoWeekLow": 135.5,
+      "high": 211.92,
+      "low": 203.9,
+      "name": "Lam Research Corporation",
+      "open": 211.79,
+      "peRatio": 31.563337,
+      "previousClose": 200.44,
+      "price": 211.79,
+      "symbol": "LRCX",
+      "volume": 1180844
+    },
+    {
+      "change": -12.520000000000039,
+      "changePercent": -3.278173439463772,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 739.67,
+      "fiftyTwoWeekLow": 203.4,
+      "high": 383.65,
+      "low": 362.93,
+      "name": "Applied Materials, Inc.",
+      "open": 369.4,
+      "peRatio": 31.872303,
+      "previousClose": 381.92,
+      "price": 369.4,
+      "symbol": "AMAT",
+      "volume": 7889003
+    },
+    {
+      "change": 8.71999999999997,
+      "changePercent": 3.1439284684164877,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 334.03,
+      "fiftyTwoWeekLow": 152.73,
+      "high": 288,
+      "low": 280,
+      "name": "Texas Instruments Incorporated",
+      "open": 286.08,
+      "peRatio": 37.105057,
+      "previousClose": 277.36,
+      "price": 286.08,
+      "symbol": "TXN",
+      "volume": 487538
+    },
+    {
+      "change": 4.410000000000025,
+      "changePercent": 1.4051746112668957,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 432.33,
+      "fiftyTwoWeekLow": 139.57,
+      "high": 320.95,
+      "low": 314.1,
+      "name": "Palo Alto Networks, Inc.",
+      "open": 318.25,
+      "peRatio": 795.625,
+      "previousClose": 313.84,
+      "price": 318.25,
+      "symbol": "PANW",
+      "volume": 567860
+    },
+    {
+      "change": 0.10500000000000398,
+      "changePercent": 0.16558902381328494,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 116.733,
+      "fiftyTwoWeekLow": 61.39,
+      "high": 63.74,
+      "low": 62.95,
+      "name": "Netflix, Inc.",
+      "open": 63.515,
+      "peRatio": 18.359827,
+      "previousClose": 63.41,
+      "price": 63.515,
+      "symbol": "NFLX",
+      "volume": 3112326
+    },
+    {
+      "change": 2.5600000000000023,
+      "changePercent": 1.547669427483225,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 259.92,
+      "fiftyTwoWeekLow": 121.99,
+      "high": 168.06,
+      "low": 163.29,
+      "name": "QUALCOMM Incorporated",
+      "open": 167.97,
+      "peRatio": 13.231103,
+      "previousClose": 165.41,
+      "price": 167.97,
+      "symbol": "QCOM",
+      "volume": 893822
+    },
+    {
+      "change": 14.425000000000011,
+      "changePercent": 3.9677082187259356,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 445.91,
+      "fiftyTwoWeekLow": 224.25,
+      "high": 379.2,
+      "low": 367.12,
+      "name": "Analog Devices, Inc.",
+      "open": 377.985,
+      "peRatio": 44.891327,
+      "previousClose": 363.56,
+      "price": 377.985,
+      "symbol": "ADI",
+      "volume": 305664
+    },
+    {
+      "change": 6.655000000000001,
+      "changePercent": 4.805401111993646,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 307.37,
+      "fiftyTwoWeekLow": 107.196,
+      "high": 145.36,
+      "low": 141.51,
+      "name": "KLA Corporation",
+      "open": 145.145,
+      "peRatio": 36.377193,
+      "previousClose": 138.49,
+      "price": 145.145,
+      "symbol": "KLAC",
+      "volume": 1779387
+    },
+    {
+      "change": 9.080000000000013,
+      "changePercent": 6.430594900849868,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 329.88,
+      "fiftyTwoWeekLow": 70.69,
+      "high": 150.28,
+      "low": 142.28,
+      "name": "Marvell Technology, Inc.",
+      "open": 150.28,
+      "peRatio": 49.43421,
+      "previousClose": 141.2,
+      "price": 150.28,
+      "symbol": "MRVL",
+      "volume": 4635188
+    },
+    {
+      "change": 1.0400000000000205,
+      "changePercent": 0.4188650368520764,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 339.95,
+      "fiftyTwoWeekLow": 183,
+      "high": 250.97,
+      "low": 247.03,
+      "name": "NXP Semiconductors N.V.",
+      "open": 249.33,
+      "peRatio": 19.616837,
+      "previousClose": 248.29,
+      "price": 249.33,
+      "symbol": "NXPI",
+      "volume": 595643
+    },
+    {
+      "change": 8.900000000000034,
+      "changePercent": 1.9757581139279925,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 539.48,
+      "fiftyTwoWeekLow": 362.55,
+      "high": 460.38,
+      "low": 451.78,
+      "name": "Synopsys, Inc.",
+      "open": 459.36,
+      "peRatio": 81.15901,
+      "previousClose": 450.46,
+      "price": 459.36,
+      "symbol": "SNPS",
+      "volume": 60499
+    },
+    {
+      "change": 6.800000000000011,
+      "changePercent": 2.1255313828457147,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 416.69,
+      "fiftyTwoWeekLow": 262.75,
+      "high": 327.37,
+      "low": 321.93,
+      "name": "Cadence Design Systems, Inc.",
+      "open": 326.72,
+      "peRatio": 64.95427,
+      "previousClose": 319.92,
+      "price": 326.72,
+      "symbol": "CDNS",
+      "volume": 52794
+    },
+    {
+      "change": 2.694999999999993,
+      "changePercent": 1.242508068234206,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 286.99,
+      "fiftyTwoWeekLow": 85.68,
+      "high": 221,
+      "low": 216.25,
+      "name": "CrowdStrike Holdings, Inc.",
+      "open": 219.595,
+      "peRatio": 3659.9167,
+      "previousClose": 216.9,
+      "price": 219.595,
+      "symbol": "CRWD",
+      "volume": 875304
+    },
+    {
+      "change": 0.8449999999999989,
+      "changePercent": 0.438050803525142,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 236.8,
+      "fiftyTwoWeekLow": 110.36,
+      "high": 194.76,
+      "low": 192.11,
+      "name": "Workday, Inc.",
+      "open": 193.745,
+      "peRatio": 39.459267,
+      "previousClose": 192.9,
+      "price": 193.745,
+      "symbol": "WDAY",
+      "volume": 80736
+    },
+    {
+      "change": 0.3199999999999932,
+      "changePercent": 0.12226807274950066,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 320,
+      "fiftyTwoWeekLow": 185.5,
+      "high": 263.682,
+      "low": 260.08,
+      "name": "Autodesk, Inc.",
+      "open": 262.04,
+      "peRatio": 33.98703,
+      "previousClose": 261.72,
+      "price": 262.04,
+      "symbol": "ADSK",
+      "volume": 96297
+    },
+    {
+      "change": 3.4099999999999966,
+      "changePercent": 2.8694042409962943,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 197.13,
+      "fiftyTwoWeekLow": 73.55,
+      "high": 122.655,
+      "low": 119.485,
+      "name": "Fortinet, Inc.",
+      "open": 122.25,
+      "peRatio": 39.95098,
+      "previousClose": 118.84,
+      "price": 122.25,
+      "symbol": "FTNT",
+      "volume": 449550
+    },
+    {
+      "change": 0.8200000000000216,
+      "changePercent": 0.4563922747258984,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 239,
+      "fiftyTwoWeekLow": 143.3,
+      "high": 183,
+      "low": 179.59,
+      "name": "DoorDash, Inc.",
+      "open": 180.49,
+      "peRatio": 74.94758,
+      "previousClose": 179.67,
+      "price": 180.49,
+      "symbol": "DASH",
+      "volume": 320029
+    },
+    {
+      "change": 5.429999999999978,
+      "changePercent": 2.858045160271582,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 197.87,
+      "fiftyTwoWeekLow": 110.81,
+      "high": 197.87,
+      "low": 191.84,
+      "name": "Airbnb, Inc.",
+      "open": 195.42,
+      "peRatio": 36.664165,
+      "previousClose": 189.99,
+      "price": 195.42,
+      "symbol": "ABNB",
+      "volume": 730476
+    },
+    {
+      "change": -209.60000000000014,
+      "changePercent": -12.046807825827075,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 2342,
+      "fiftyTwoWeekLow": 1469.01,
+      "high": 1608,
+      "low": 1469.01,
+      "name": "MercadoLibre, Inc.",
+      "open": 1530.28,
+      "peRatio": 41.617622,
+      "previousClose": 1739.88,
+      "price": 1530.28,
+      "symbol": "MELI",
+      "volume": 2154199
+    },
+    {
+      "change": -3,
+      "changePercent": -0.9584664536741214,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 665.07,
+      "fiftyTwoWeekLow": 307,
+      "high": 320.97,
+      "low": 308.01,
+      "name": "Axon Enterprise, Inc.",
+      "open": 310,
+      "peRatio": 99.67846,
+      "previousClose": 313,
+      "price": 310,
+      "symbol": "AXON",
+      "volume": 181244
+    },
+    {
+      "change": -0.4099999999999966,
+      "changePercent": -0.29008065657280074,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 171.48,
+      "fiftyTwoWeekLow": 123.47,
+      "high": 141.68,
+      "low": 140.61,
+      "name": "PepsiCo, Inc.",
+      "open": 140.93,
+      "peRatio": 17.727043,
+      "previousClose": 141.34,
+      "price": 140.93,
+      "symbol": "PEP",
+      "volume": 1117590
+    },
+    {
+      "change": -0.4099999999999966,
+      "changePercent": -0.6210239321417701,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 68.75,
+      "fiftyTwoWeekLow": 51.2,
+      "high": 66.12,
+      "low": 65.525,
+      "name": "Mondelez International, Inc.",
+      "open": 65.61,
+      "peRatio": 20.69716,
+      "previousClose": 66.02,
+      "price": 65.61,
+      "symbol": "MDLZ",
+      "volume": 308645
+    },
+    {
+      "change": 1.8599999999999994,
+      "changePercent": 1.7645384688359733,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 111.5,
+      "fiftyTwoWeekLow": 81.97,
+      "high": 107.98,
+      "low": 106.28,
+      "name": "Starbucks Corporation",
+      "open": 107.27,
+      "peRatio": 48.53846,
+      "previousClose": 105.41,
+      "price": 107.27,
+      "symbol": "SBUX",
+      "volume": 443886
+    },
+    {
+      "change": -0.5150000000000006,
+      "changePercent": -1.1264216972878403,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 50.17,
+      "fiftyTwoWeekLow": 34.685,
+      "high": 46.13,
+      "low": 45.17,
+      "name": "Monster Beverage Corporation",
+      "open": 45.205,
+      "peRatio": 41.095455,
+      "previousClose": 45.72,
+      "price": 45.205,
+      "symbol": "MNST",
+      "volume": 493547
+    },
+    {
+      "change": -0.07000000000000028,
+      "changePercent": -0.19110019110019189,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 37.89,
+      "fiftyTwoWeekLow": 24.88,
+      "high": 36.86,
+      "low": 36.54,
+      "name": "Keurig Dr Pepper Inc.",
+      "open": 36.56,
+      "peRatio": 32.93694,
+      "previousClose": 36.63,
+      "price": 36.56,
+      "symbol": "KDP",
+      "volume": 706006
+    },
+    {
+      "change": -0.6850000000000023,
+      "changePercent": -0.5898561956428161,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 119.09,
+      "fiftyTwoWeekLow": 84.66,
+      "high": 116.32,
+      "low": 115.42,
+      "name": "Coca-Cola Europacific Partners PLC",
+      "open": 115.445,
+      "peRatio": 22.28668,
+      "previousClose": 116.13,
+      "price": 115.445,
+      "symbol": "CCEP",
+      "volume": 65649
+    },
+    {
+      "change": -0.07000000000000739,
+      "changePercent": -0.07787295583491755,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 102.46,
+      "fiftyTwoWeekLow": 82.59,
+      "high": 90.75,
+      "low": 89.7,
+      "name": "O'Reilly Automotive, Inc.",
+      "open": 89.82,
+      "peRatio": 27.552147,
+      "previousClose": 89.89,
+      "price": 89.82,
+      "symbol": "ORLY",
+      "volume": 438148
+    },
+    {
+      "change": 4.225000000000023,
+      "changePercent": 2.5618481688091337,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 252.03,
+      "fiftyTwoWeekLow": 126.01,
+      "high": 170,
+      "low": 165.99,
+      "name": "Old Dominion Freight Line, Inc.",
+      "open": 169.145,
+      "peRatio": 30.367146,
+      "previousClose": 164.92,
+      "price": 169.145,
+      "symbol": "ODFL",
+      "volume": 110354
+    },
+    {
+      "change": 0.02499999999999858,
+      "changePercent": 0.10250102501024427,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 32.86,
+      "fiftyTwoWeekLow": 20.48,
+      "high": 24.46,
+      "low": 24.16,
+      "name": "Comcast Corporation",
+      "open": 24.415,
+      "peRatio": 7.726266,
+      "previousClose": 24.39,
+      "price": 24.415,
+      "symbol": "CMCSA",
+      "volume": 2050494
+    },
+    {
+      "change": 3.3500000000000227,
+      "changePercent": 2.0677735942225928,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 224.75,
+      "fiftyTwoWeekLow": 143.75,
+      "high": 165.76,
+      "low": 161.549,
+      "name": "T-Mobile US, Inc.",
+      "open": 165.36,
+      "peRatio": 15.945998,
+      "previousClose": 162.01,
+      "price": 165.36,
+      "symbol": "TMUS",
+      "volume": 362123
+    },
+    {
+      "change": -4.360000000000014,
+      "changePercent": -0.9469614699622113,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 483.99,
+      "fiftyTwoWeekLow": 312.39,
+      "high": 465.5,
+      "low": 454.633,
+      "name": "Amgen Inc.",
+      "open": 456.06,
+      "peRatio": 26.438261,
+      "previousClose": 460.42,
+      "price": 456.06,
+      "symbol": "AMGN",
+      "volume": 174249
+    },
+    {
+      "change": -0.46599999999997976,
+      "changePercent": -0.27922583737790146,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 176.58,
+      "fiftyTwoWeekLow": 116.88,
+      "high": 169.5,
+      "low": 165.985,
+      "name": "Gilead Sciences, Inc.",
+      "open": 166.424,
+      "peRatio": null,
+      "previousClose": 166.89,
+      "price": 166.424,
+      "symbol": "GILD",
+      "volume": 246850
+    },
+    {
+      "change": -6.951999999999998,
+      "changePercent": -1.2707232813613845,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 568.67,
+      "fiftyTwoWeekLow": 410.5,
+      "high": 555.99,
+      "low": 538.48,
+      "name": "Vertex Pharmaceuticals Incorporated",
+      "open": 540.138,
+      "peRatio": 34.757885,
+      "previousClose": 547.09,
+      "price": 540.138,
+      "symbol": "VRTX",
+      "volume": 50976
+    },
+    {
+      "change": 3.420000000000016,
+      "changePercent": 0.7553003533568939,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 603.88,
+      "fiftyTwoWeekLow": 328.57,
+      "high": 458.99,
+      "low": 454.04,
+      "name": "Intuitive Surgical, Inc.",
+      "open": 456.22,
+      "peRatio": 55.165657,
+      "previousClose": 452.8,
+      "price": 456.22,
+      "symbol": "ISRG",
+      "volume": 119454
+    },
+    {
+      "change": 8.620000000000005,
+      "changePercent": 1.2750724809182896,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 769.98,
+      "fiftyTwoWeekLow": 500.61,
+      "high": 688.56,
+      "low": 680.89,
+      "name": "IDEXX Laboratories, Inc.",
+      "open": 684.66,
+      "peRatio": 46.136116,
+      "previousClose": 676.04,
+      "price": 684.66,
+      "symbol": "IDXX",
+      "volume": 16949
+    },
+    {
+      "change": 0.5600000000000023,
+      "changePercent": 0.7052008563153284,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 92.59,
+      "fiftyTwoWeekLow": 54.2,
+      "high": 80.78,
+      "low": 79.81,
+      "name": "DexCom, Inc.",
+      "open": 79.97,
+      "peRatio": 31.484253,
+      "previousClose": 79.41,
+      "price": 79.97,
+      "symbol": "DXCM",
+      "volume": 229848
+    },
+    {
+      "change": -0.6100000000000136,
+      "changePercent": -0.06745176093326849,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 991.73,
+      "fiftyTwoWeekLow": 591.52,
+      "high": 922.35,
+      "low": 901.07,
+      "name": "Regeneron Pharmaceuticals, Inc.",
+      "open": 903.74,
+      "peRatio": 19.976562,
+      "previousClose": 904.35,
+      "price": 903.74,
+      "symbol": "REGN",
+      "volume": 43993
+    },
+    {
+      "change": -2.0300000000000296,
+      "changePercent": -0.6691940003296619,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 310.98,
+      "fiftyTwoWeekLow": 188.16,
+      "high": 303.72,
+      "low": 300.565,
+      "name": "Automatic Data Processing, Inc.",
+      "open": 301.32,
+      "peRatio": 26.712767,
+      "previousClose": 303.35,
+      "price": 301.32,
+      "symbol": "ADP",
+      "volume": 191840
+    },
+    {
+      "change": 0.5350000000000037,
+      "changePercent": 1.0891693811074994,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 53.6,
+      "fiftyTwoWeekLow": 33.63,
+      "high": 49.71,
+      "low": 49.16,
+      "name": "CSX Corporation",
+      "open": 49.655,
+      "peRatio": 25.861979,
+      "previousClose": 49.12,
+      "price": 49.655,
+      "symbol": "CSX",
+      "volume": 491222
+    },
+    {
+      "change": 1.5799999999999983,
+      "changePercent": 1.549323396744458,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 139.24,
+      "fiftyTwoWeekLow": 93.86,
+      "high": 104.04,
+      "low": 103.115,
+      "name": "PACCAR Inc",
+      "open": 103.56,
+      "peRatio": 19.76336,
+      "previousClose": 101.98,
+      "price": 103.56,
+      "symbol": "PCAR",
+      "volume": 127019
+    },
+    {
+      "change": 0.9600000000000009,
+      "changePercent": 1.8116625778448778,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 54.96,
+      "fiftyTwoWeekLow": 38.97,
+      "high": 54.27,
+      "low": 53.5,
+      "name": "Fastenal Company",
+      "open": 53.95,
+      "peRatio": 43.86179,
+      "previousClose": 52.99,
+      "price": 53.95,
+      "symbol": "FAST",
+      "volume": 274619
+    },
+    {
+      "change": -0.2600000000000193,
+      "changePercent": -0.11692750494694158,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 233.46,
+      "fiftyTwoWeekLow": 161.16,
+      "high": 223.23,
+      "low": 221.7,
+      "name": "Cintas Corporation",
+      "open": 222.1,
+      "peRatio": 43.806705,
+      "previousClose": 222.36,
+      "price": 222.1,
+      "symbol": "CTAS",
+      "volume": 115901
+    },
+    {
+      "change": -1.2600000000000051,
+      "changePercent": -1.076371091747826,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 127.98,
+      "fiftyTwoWeekLow": 85.45,
+      "high": 117.32,
+      "low": 115.46,
+      "name": "Paychex, Inc.",
+      "open": 115.8,
+      "peRatio": 22.97619,
+      "previousClose": 117.06,
+      "price": 115.8,
+      "symbol": "PAYX",
+      "volume": 163103
+    },
+    {
+      "change": -2.069999999999993,
+      "changePercent": -1.0117796568747217,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 227.16,
+      "fiftyTwoWeekLow": 155.94,
+      "high": 205.72,
+      "low": 202.52,
+      "name": "Verisk Analytics, Inc.",
+      "open": 202.52,
+      "peRatio": 30.684849,
+      "previousClose": 204.59,
+      "price": 202.52,
+      "symbol": "VRSK",
+      "volume": 53108
+    },
+    {
+      "change": -0.22999999999999687,
+      "changePercent": -0.504164839982457,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 50.65,
+      "fiftyTwoWeekLow": 39.73,
+      "high": 45.99,
+      "low": 45.345,
+      "name": "Exelon Corporation",
+      "open": 45.39,
+      "peRatio": 17.730469,
+      "previousClose": 45.62,
+      "price": 45.39,
+      "symbol": "EXC",
+      "volume": 308861
+    },
+    {
+      "change": -0.030000000000001137,
+      "changePercent": -0.03765532822894582,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 84.23,
+      "fiftyTwoWeekLow": 68.72,
+      "high": 80.34,
+      "low": 79.41,
+      "name": "Xcel Energy Inc.",
+      "open": 79.64,
+      "peRatio": 18.564102,
+      "previousClose": 79.67,
+      "price": 79.64,
+      "symbol": "XEL",
+      "volume": 166828
+    },
+    {
+      "change": -0.519999999999996,
+      "changePercent": -0.4109697304986928,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 140.58,
+      "fiftyTwoWeekLow": 112.54,
+      "high": 127.6,
+      "low": 125.83,
+      "name": "American Electric Power Company, Inc.",
+      "open": 126.01,
+      "peRatio": 20.58987,
+      "previousClose": 126.53,
+      "price": 126.01,
+      "symbol": "AEP",
+      "volume": 145585
+    },
+    {
+      "change": -1.8700000000000045,
+      "changePercent": -1.1991791714762117,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 479.79,
+      "fiftyTwoWeekLow": 152.171,
+      "high": 156.65,
+      "low": 152.171,
+      "name": "Alnylam Pharmaceuticals, Inc.",
+      "open": 154.07,
+      "peRatio": 7.781314,
+      "previousClose": 155.94,
+      "price": 154.07,
+      "symbol": "ALNY",
+      "volume": 168138
+    },
+    {
+      "change": 79.6400000000001,
+      "changePercent": 5.589752588173371,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 1999.96,
+      "fiftyTwoWeekLow": 946.11,
+      "high": 1504.39,
+      "low": 1468.02,
+      "name": "ASML Holding N.V.",
+      "open": 1504.39,
+      "peRatio": 37.014767,
+      "previousClose": 1424.75,
+      "price": 1504.39,
+      "symbol": "ASML",
+      "volume": 393463
+    },
+    {
+      "change": 2.670000000000016,
+      "changePercent": 1.6618429651759974,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 220.806,
+      "fiftyTwoWeekLow": 146.28,
+      "high": 164.5,
+      "low": 162.19,
+      "name": "Booking Holdings Inc.",
+      "open": 163.335,
+      "peRatio": 17.715294,
+      "previousClose": 160.665,
+      "price": 163.335,
+      "symbol": "BKNG",
+      "volume": 691531
+    },
+    {
+      "change": 0.07000000000000384,
+      "changePercent": 0.2190923317684001,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 42.05,
+      "fiftyTwoWeekLow": 25.72,
+      "high": 32.18,
+      "low": 31.78,
+      "name": "Copart, Inc.",
+      "open": 32.02,
+      "peRatio": 20.658066,
+      "previousClose": 31.95,
+      "price": 32.02,
+      "symbol": "CPRT",
+      "volume": 409747
+    },
+    {
+      "change": 0.17999999999994998,
+      "changePercent": 0.03493449781658418,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 548.2,
+      "fiftyTwoWeekLow": 387.78,
+      "high": 517.92,
+      "low": 512.52,
+      "name": "Linde plc",
+      "open": 515.43,
+      "peRatio": 34.225098,
+      "previousClose": 515.25,
+      "price": 515.43,
+      "symbol": "LIN",
+      "volume": 110636
+    },
+    {
+      "change": -1.75,
+      "changePercent": -0.36718422156945024,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 507.24,
+      "fiftyTwoWeekLow": 305.96,
+      "high": 476.17,
+      "low": 473.665,
+      "name": "Roper Technologies, Inc.",
+      "open": 474.85,
+      "peRatio": 18.791056,
+      "previousClose": 476.6,
+      "price": 474.85,
+      "symbol": "ROP",
+      "volume": 29404
+    },
+    {
+      "change": 1.0749999999999957,
+      "changePercent": 1.8423307626392387,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 105.91,
+      "fiftyTwoWeekLow": 48.52,
+      "high": 59.47,
+      "low": 58.56,
+      "name": "Microchip Technology Incorporated",
+      "open": 59.425,
+      "peRatio": 44.68045,
+      "previousClose": 58.35,
+      "price": 59.425,
+      "symbol": "MCHP",
+      "volume": 1006615
+    },
+    {
+      "change": 83.51499999999987,
+      "changePercent": 7.0154732703874085,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 1714.09,
+      "fiftyTwoWeekLow": 833.18,
+      "high": 1275.155,
+      "low": 1210,
+      "name": "Monolithic Power Systems, Inc.",
+      "open": 1273.955,
+      "peRatio": 69.844025,
+      "previousClose": 1190.44,
+      "price": 1273.955,
+      "symbol": "MPWR",
+      "volume": 60615
+    },
+    {
+      "change": -10.689999999999998,
+      "changePercent": -5.279273050521012,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 452.7,
+      "fiftyTwoWeekLow": 100.02,
+      "high": 209.496,
+      "low": 189.89,
+      "name": "Arm Holdings plc",
+      "open": 191.8,
+      "peRatio": 197.73195,
+      "previousClose": 202.49,
+      "price": 191.8,
+      "symbol": "ARM",
+      "volume": 8537944
+    },
+    {
+      "change": 5.559999999999945,
+      "changePercent": 1.3350301342233402,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 433.3,
+      "fiftyTwoWeekLow": 280.99,
+      "high": 425.76,
+      "low": 422.03,
+      "name": "Marriott International, Inc.",
+      "open": 422.03,
+      "peRatio": 42.07677,
+      "previousClose": 416.47,
+      "price": 422.03,
+      "symbol": "MAR",
+      "volume": 114079
+    },
+    {
+      "change": 5.076999999999998,
+      "changePercent": 2.1969795317841525,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 257,
+      "fiftyTwoWeekLow": 157.73,
+      "high": 237.235,
+      "low": 232.83,
+      "name": "Ross Stores, Inc.",
+      "open": 236.167,
+      "peRatio": 28.557133,
+      "previousClose": 231.09,
+      "price": 236.167,
+      "symbol": "ROST",
+      "volume": 113360
+    },
+    {
+      "change": 0.8499999999999943,
+      "changePercent": 0.39558802997160813,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 265.94,
+      "fiftyTwoWeekLow": 183.86,
+      "high": 217,
+      "low": 214.38,
+      "name": "Take-Two Interactive Software, Inc.",
+      "open": 215.72,
+      "peRatio": null,
+      "previousClose": 214.87,
+      "price": 215.72,
+      "symbol": "TTWO",
+      "volume": 316770
+    },
+    {
+      "change": 0.30000000000001137,
+      "changePercent": 0.201463971526433,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 180.88,
+      "fiftyTwoWeekLow": 94,
+      "high": 150.98,
+      "low": 148.01,
+      "name": "Shopify Inc.",
+      "open": 149.21,
+      "peRatio": 91.53988,
+      "previousClose": 148.91,
+      "price": 149.21,
+      "symbol": "SHOP",
+      "volume": 494774
+    },
+    {
+      "change": 0.9699999999999989,
+      "changePercent": 0.5417783735478099,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 300.68,
+      "fiftyTwoWeekLow": 98.01,
+      "high": 180.75,
+      "low": 176.51,
+      "name": "Datadog, Inc.",
+      "open": 180.01,
+      "peRatio": 250.01387,
+      "previousClose": 179.04,
+      "price": 180.01,
+      "symbol": "DDOG",
+      "volume": 358727
+    },
+    {
+      "change": 14.309999999999945,
+      "changePercent": 3.657788456622858,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 738.01,
+      "fiftyTwoWeekLow": 225.19,
+      "high": 406.47,
+      "low": 386.505,
+      "name": "AppLovin Corporation",
+      "open": 405.53,
+      "peRatio": 27.308416,
+      "previousClose": 391.22,
+      "price": 405.53,
+      "symbol": "APP",
+      "volume": 899670
+    },
+    {
+      "change": 7.814999999999998,
+      "changePercent": 3.126625325065012,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 380.78,
+      "fiftyTwoWeekLow": 228.63,
+      "high": 261.75,
+      "low": 247,
+      "name": "Constellation Energy Corporation",
+      "open": 257.765,
+      "peRatio": 25.196972,
+      "previousClose": 249.95,
+      "price": 257.765,
+      "symbol": "CEG",
+      "volume": 719821
+    },
+    {
+      "change": 0.39000000000000057,
+      "changePercent": 0.8147064967620651,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 70.41,
+      "fiftyTwoWeekLow": 44.26,
+      "high": 48.34,
+      "low": 47.645,
+      "name": "Baker Hughes Company",
+      "open": 48.26,
+      "peRatio": 16.584192,
+      "previousClose": 47.87,
+      "price": 48.26,
+      "symbol": "BKR",
+      "volume": 473744
+    },
+    {
+      "change": -3.085000000000008,
+      "changePercent": -1.723848904783196,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 216.9,
+      "fiftyTwoWeekLow": 139.41,
+      "high": 176.205,
+      "low": 173.75,
+      "name": "Diamondback Energy, Inc.",
+      "open": 175.875,
+      "peRatio": 23.670929,
+      "previousClose": 178.96,
+      "price": 175.875,
+      "symbol": "FANG",
+      "volume": 109744
+    },
+    {
+      "change": 8.550000000000011,
+      "changePercent": 3.011305603493823,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 404.47,
+      "fiftyTwoWeekLow": 271.41,
+      "high": 294.69,
+      "low": 290.35,
+      "name": "Alphabet Inc.",
+      "open": 292.48,
+      "peRatio": 15.269452,
+      "previousClose": 283.93,
+      "price": 292.48,
+      "symbol": "GOOG",
+      "volume": 6740793
+    },
+    {
+      "change": 3.530000000000001,
+      "changePercent": 1.909140075716604,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": 197.83,
+      "fiftyTwoWeekLow": 155.95,
+      "high": 188.48,
+      "low": 185.95,
+      "name": "Vanguard S&P 500 Index ETF",
+      "open": 188.43,
+      "peRatio": 23.214716,
+      "previousClose": 184.9,
+      "price": 188.43,
+      "symbol": "VFV.TO",
+      "volume": 132803
+    },
+    {
+      "change": 0,
+      "changePercent": 0,
+      "changePeriod": "1d",
+      "fiftyTwoWeekHigh": null,
+      "fiftyTwoWeekLow": null,
+      "high": 0,
+      "low": 0,
+      "name": "FORA",
+      "open": 0,
+      "peRatio": null,
+      "previousClose": 0,
+      "price": 0,
+      "symbol": "FORA",
+      "volume": 0
+    }
+  ],
+  "stockkat_news_read": {
+    "initialized": true,
+    "links": {
+      "https://247wallst.com/investing/2026/11/05/redwire-plunges-21-as-revenue-miss-overshadows-record-margins-and-backlog-intuitive-machines-sinks-15-planet-labs-tumbles-12/?.tsrc=rss": 1793913571644,
+      "https://247wallst.com/investing/2026/11/05/wall-street-is-already-bracing-for-a-2027-debt-ceiling-fight/?.tsrc=rss": 1793913571644,
+      "https://247wallst.com/investing/etf/2026/11/05/amds-double-digit-drop-is-rippling-through-your-chip-etfs/?.tsrc=rss": 1793913571644,
+      "https://247wallst.com/investing/etf/2026/11/05/nvidia-is-the-biggest-bet-in-your-index-fund-heres-what-its-drop-just-cost-you/?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/energy/articles/sector-energy-stocks-drop-thursday-210255557.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/healthcare/articles/10x-genomics-reports-third-quarter-210500999.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/healthcare/articles/candel-therapeutics-announces-inducement-grant-210500333.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/m/38cb0654-6e49-3715-b4e4-f2f830876d7a/stock-market-today%3A-dow-loses.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/m/751d4464-b17e-389e-ab70-1320e5d023cb/tesla%2C-spacex-continue.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/m/d7c384d4-af62-3dae-a383-dac5c15508c9/tesla-optimus-rival-agility.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/markets/article/retail-traders-dump-358-million-in-stocks-in-biggest-selling-day-since-2020-205924608.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/markets/articles/exchange-traded-funds-lower-us-181447179.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/markets/options/articles/market-jitters-buffer-etfs-help-180400264.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/markets/options/articles/wall-streets-fear-gauge-just-172244609.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/markets/stocks/articles/3-stocks-riding-shift-away-201618798.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/markets/stocks/articles/best-mag7-dip-buys-nvidia-210653656.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/markets/stocks/articles/canadian-tech-stock-getting-crushed-205740646.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/markets/stocks/articles/nasdaq-sinks-correction-territory-dow-204537057.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/markets/stocks/articles/sector-tech-stocks-tumble-afternoon-205415545.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/markets/stocks/articles/synaptics-reports-first-quarter-fiscal-210500107.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/technology/ai/articles/amazon-com-amzn-could-gain-201734801.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/technology/articles/qualcomm-apos-data-center-investments-205746920.html?.tsrc=rss": 1793913571644,
+      "https://finance.yahoo.com/video/11-5-2026-democrats-sweep-203812943.html?.tsrc=rss": 1793913571644,
+      "https://stocktwits.com/news-articles/markets/equity/amazon-uber-eats-deal-sends-dash-stock-to-biggest-drop-in-a-year/cNG1MHxR94F?.tsrc=rss": 1793913571644,
+      "https://stocktwits.com/news-articles/markets/equity/apple-reportedly-set-to-raise-7-5-b-from-bond-offering-amid-market-selloff/cNG1HDrR948?.tsrc=rss": 1793913571644,
+      "https://www.benzinga.com/markets/prediction-markets/26/11/62948387/elon-musks-spacex-default-risk-hits-record-high-as-democratic-sweep-adds-to-ai-rout?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss": 1793913571644,
+      "https://www.bisnow.com/news/new-york/multifamily/how-mamdani-pied-a-terre-tax-could-change-nyc-high-end-rental-market?.tsrc=rss": 1793913571644,
+      "https://www.cbsnews.com/news/stocks-midterm-elections-tech-companies-ai-data-centers/?.tsrc=rss": 1793913571644,
+      "https://www.fool.com/coverage/etfs/2026/11/05/vde-vs-nlr-does-a-broad-energy-etf-beat-a-nuclear-focused-fund/?.tsrc=rss": 1793913571644,
+      "https://www.fool.com/investing/2026/11/05/berkshire-hathaway-reports-nov-7-with-its-stock-at-a-record-its-cash-pile-is-the-number-to-watch/?.tsrc=rss": 1793913571644,
+      "https://www.fool.com/investing/2026/11/05/is-amd-stock-a-buy-as-ai-revenue-soars/?.tsrc=rss": 1793913571644,
+      "https://www.fool.com/investing/2026/11/05/spacex-and-tesla-stock-plunges-have-wiped-about-usd450-billion-in-value-since-the-midterms-is-it-time-to-buy/?.tsrc=rss": 1793913571644,
+      "https://www.fool.com/investing/2026/11/05/waiting-for-a-stock-market-crash-before-you-invest/?.tsrc=rss": 1793913571644,
+      "https://www.fool.com/investing/2026/11/05/why-lumen-technologies-sank-today/?.tsrc=rss": 1793913571644,
+      "https://www.thestreet.com/crypto/markets/bitcoin-stocks-crash-as-markets-erase-post-election-rally?.tsrc=rss": 1793913571644,
+      "https://www.thestreet.com/investing/billionaire-bill-ackmans-market-warning-resurfaces-as-stocks-plunge?.tsrc=rss": 1793913571644,
+      "https://www.tikr.com/blog/circle-sinks-10-as-crypto-stocks-slide-and-mizuho-calls-q3-uneventful?ref=yahoofinance&tlnk=yf-261105-w999qv4j&.tsrc=rss": 1793913571644,
+      "https://www.tikr.com/blog/coinbase-sinks-9-as-bitcoin-falls-below-76000?ref=yahoofinance&tlnk=yf-261105-hg64qgxm&.tsrc=rss": 1793913571644,
+      "https://www.tikr.com/blog/reddit-sinks-8-as-social-ad-worries-deepen-in-tech-rout?ref=yahoofinance&tlnk=yf-261105-whpgc2qp&.tsrc=rss": 1793913571644,
+      "https://www.tikr.com/blog/strategy-sinks-9-as-bitcoin-tumbles-below-76000-and-tech-sells-off?ref=yahoofinance&tlnk=yf-261105-qg8jq549&.tsrc=rss": 1793913571644
+    }
+  },
+  "stockkat_options_ai": {
+    "maxRisk": "",
+    "outlook": "bullish",
+    "scope": "15",
+    "template": "read_chain"
+  },
+  "stockkat_options_guided": "up",
+  "stockkat_options_state": {
+    "expiration": "2026-12-18",
+    "legs": [],
+    "mode": "pro",
+    "symbol": "FIS",
+    "window": "0"
+  },
+  "stockkat_paper_account": {
+    "cash": 4958.03,
+    "optionPositions": [
+      {
+        "breakevens": [
+          702.05,
+          793.95
+        ],
+        "collateral": 1500.1,
+        "entryNet": 2.948,
+        "exitPlan": "TP 50% credit / stop 1× credit / exit ≤21 DTE",
+        "expiration": "2026-12-18",
+        "fees": 2.6,
+        "id": "opt-5e32cdf9",
+        "kind": "credit",
+        "label": "SPY 705/690/791/802 IC 12/18",
+        "legs": [
+          {
+            "action": "sell",
+            "contractSymbol": "SPY261218P00705000",
+            "entryIV": 0.22,
+            "entryPrice": 5.692,
+            "strike": 705,
+            "type": "put"
+          },
+          {
+            "action": "buy",
+            "contractSymbol": "SPY261218P00690000",
+            "entryIV": 0.2383,
+            "entryPrice": 4.395,
+            "strike": 690,
+            "type": "put"
+          },
+          {
+            "action": "sell",
+            "contractSymbol": "SPY261218C00791000",
+            "entryIV": 0.1445,
+            "entryPrice": 3.488,
+            "strike": 791,
+            "type": "call"
+          },
+          {
+            "action": "buy",
+            "contractSymbol": "SPY261218C00802000",
+            "entryIV": 0.1379,
+            "entryPrice": 1.837,
+            "strike": 802,
+            "type": "call"
+          }
+        ],
+        "maxGain": 2.948,
+        "maxLoss": 12.053,
+        "openedAt": "2026-11-03T23:20:51",
+        "qty": 1,
+        "rationale": "No clear trend, IV rich → range-bound premium sale",
+        "source": "etf-options-swing",
+        "strategy": "iron_condor",
+        "suggestionId": "SPY-IRONCO-3eff",
+        "symbol": "SPY",
+        "underlyingAtEntry": 754.35
+      },
+      {
+        "breakevens": [
+          113.58
+        ],
+        "collateral": 500,
+        "entryNet": 1.415,
+        "exitDte": 21,
+        "exitPlan": "TP 50% of credit / stop 1× credit / exit ≤21 DTE",
+        "expiration": "2026-12-18",
+        "fees": 1.3,
+        "id": "opt-90321656",
+        "kind": "credit",
+        "label": "DIS 115/110P 12/18",
+        "legs": [
+          {
+            "action": "sell",
+            "contractSymbol": "DIS261218P00115000",
+            "entryIV": 0.3114,
+            "entryPrice": 3.125,
+            "strike": 115,
+            "type": "put"
+          },
+          {
+            "action": "buy",
+            "contractSymbol": "DIS261218P00110000",
+            "entryIV": 0.319,
+            "entryPrice": 1.71,
+            "strike": 110,
+            "type": "put"
+          }
+        ],
+        "maxGain": 1.415,
+        "maxLoss": 3.585,
+        "openedAt": "2026-11-04T12:30:58",
+        "profile": "swing",
+        "qty": 1,
+        "rationale": "User-picked from stock scan: DIS in an uptrend, sell 115 put / buy 110 put for credit; wins if DIS stays above breakeven.",
+        "source": "manual (user request)",
+        "stopMult": 1,
+        "strategy": "bull_put",
+        "symbol": "DIS",
+        "tpPct": 0.5,
+        "underlyingAtEntry": 119.42
+      }
+    ],
+    "positions": {
+      "ADBE": {
+        "avgCost": 248.92,
+        "shares": 3.21
+      },
+      "DECK": {
+        "avgCost": 78.43,
+        "shares": 4.46
+      },
+      "GDDY": {
+        "avgCost": 97.46,
+        "shares": 5.13
+      },
+      "INTU": {
+        "avgCost": 303.19,
+        "shares": 1.32
+      },
+      "NVDA": {
+        "avgCost": 222.27,
+        "shares": 5.4
+      },
+      "SEZL": {
+        "avgCost": 116.55,
+        "shares": 1.29
+      }
+    },
+    "startingCash": 10000,
+    "trades": [
+      {
+        "asset": "option",
+        "id": "t-1793910299437-nsbzh",
+        "positionId": "opt-56847b11",
+        "price": 0.01,
+        "realizedPL": -20.2,
+        "shares": 2,
+        "symbol": "GLD 373/370P 11/05 (closed)",
+        "time": "2026-11-05T20:24:59.437Z",
+        "total": 3,
+        "type": "sell",
+        "underlying": "GLD"
+      },
+      {
+        "asset": "option",
+        "id": "t-1793910287369-jinog",
+        "positionId": "opt-cbe42c22",
+        "price": 0.29,
+        "realizedPL": -13.6,
+        "shares": 1,
+        "symbol": "SPY 730/725P 11/05 (closed)",
+        "time": "2026-11-05T20:24:47.369Z",
+        "total": 29.5,
+        "type": "sell",
+        "underlying": "SPY"
+      },
+      {
+        "asset": "option",
+        "id": "t-1793909591193-h57oa",
+        "positionId": "opt-0036d582",
+        "price": 0.53,
+        "realizedPL": -40.85,
+        "shares": 1,
+        "symbol": "INTC 65/70C 12/04 (closed)",
+        "time": "2026-11-05T20:13:11.193Z",
+        "total": 52.75,
+        "type": "sell",
+        "underlying": "INTC"
+      },
+      {
+        "asset": "option",
+        "id": "t-1793907568810-86dny",
+        "positionId": "opt-56847b11",
+        "price": 0.09,
+        "realizedPL": null,
+        "shares": 2,
+        "symbol": "GLD 373/370P 11/05",
+        "time": "2026-11-05T19:39:28.810Z",
+        "total": 18,
+        "type": "buy",
+        "underlying": "GLD"
+      },
+      {
+        "asset": "option",
+        "id": "t-1793907466698-mfjw4",
+        "positionId": "opt-cbe42c22",
+        "price": 0.41,
+        "realizedPL": null,
+        "shares": 1,
+        "symbol": "SPY 730/725P 11/05",
+        "time": "2026-11-05T19:37:46.698Z",
+        "total": 40.5,
+        "type": "buy",
+        "underlying": "SPY"
+      },
+      {
+        "asset": "option",
+        "id": "t-1793813480855-119va",
+        "positionId": "opt-90321656",
+        "price": 1.42,
+        "realizedPL": null,
+        "shares": 1,
+        "symbol": "DIS 115/110P 12/18",
+        "time": "2026-11-04T17:31:20.855Z",
+        "total": 141.5,
+        "type": "sell",
+        "underlying": "DIS"
+      },
+      {
+        "asset": "option",
+        "id": "t-1793812232730-7s3b5",
+        "positionId": "opt-0036d582",
+        "price": 0.91,
+        "realizedPL": null,
+        "shares": 1,
+        "symbol": "INTC 65/70C 12/04",
+        "time": "2026-11-04T17:10:32.730Z",
+        "total": 91,
+        "type": "buy",
+        "underlying": "INTC"
+      },
+      {
+        "asset": "option",
+        "id": "t-1793766080537-zkzfa",
+        "positionId": "opt-5e32cdf9",
+        "price": 2.95,
+        "realizedPL": null,
+        "shares": 1,
+        "symbol": "SPY 705/690/791/802 IC 12/18",
+        "time": "2026-11-04T04:21:20.537Z",
+        "total": 294.8,
+        "type": "sell",
+        "underlying": "SPY"
+      },
+      {
+        "id": "t-1789782199506-nmfkf",
+        "price": 116.55,
+        "realizedPL": null,
+        "shares": 1.29,
+        "symbol": "SEZL",
+        "time": "2026-09-19T01:43:19.506Z",
+        "total": 150.35,
+        "type": "buy"
+      },
+      {
+        "id": "t-1789782192694-8kgnu",
+        "price": 78.43,
+        "realizedPL": null,
+        "shares": 4.46,
+        "symbol": "DECK",
+        "time": "2026-09-19T01:43:12.694Z",
+        "total": 349.8,
+        "type": "buy"
+      },
+      {
+        "id": "t-1789782185918-9icy0",
+        "price": 303.19,
+        "realizedPL": null,
+        "shares": 1.32,
+        "symbol": "INTU",
+        "time": "2026-09-19T01:43:05.918Z",
+        "total": 400.21,
+        "type": "buy"
+      },
+      {
+        "id": "t-1789782179044-2j7st",
+        "price": 97.46,
+        "realizedPL": null,
+        "shares": 5.13,
+        "symbol": "GDDY",
+        "time": "2026-09-19T01:42:59.044Z",
+        "total": 499.97,
+        "type": "buy"
+      },
+      {
+        "id": "t-1789782172282-70pph",
+        "price": 248.92,
+        "realizedPL": null,
+        "shares": 3.21,
+        "symbol": "ADBE",
+        "time": "2026-09-19T01:42:52.283Z",
+        "total": 799.03,
+        "type": "buy"
+      },
+      {
+        "id": "t-1789782164888-2uzqi",
+        "price": 222.27,
+        "realizedPL": null,
+        "shares": 5.4,
+        "symbol": "NVDA",
+        "time": "2026-09-19T01:42:44.888Z",
+        "total": 1200.26,
+        "type": "buy"
+      },
+      {
+        "id": "t-1789781384724-drq08",
+        "price": 336.13,
+        "realizedPL": 0,
+        "shares": 1,
+        "symbol": "AAPL",
+        "time": "2026-09-19T01:29:44.724Z",
+        "total": 336.13,
+        "type": "sell"
+      },
+      {
+        "id": "t-1789781348669-dbw06",
+        "price": 336.13,
+        "realizedPL": null,
+        "shares": 1,
+        "symbol": "AAPL",
+        "time": "2026-09-19T01:29:08.669Z",
+        "total": 336.13,
+        "type": "buy"
+      }
+    ]
+  },
+  "stockkat_realized_pl": {
+    "INTC": 4040.8,
+    "NTSK": 413.5999999999998
+  },
+  "stockkat_settings": {
+    "cacheTtlMinutes": 10
+  },
+  "stockkat_stock_tags": {
+    "AAPL": [
+      "Consumer Electronics"
+    ],
+    "ABBV": [
+      "Pharmaceuticals"
+    ],
+    "ABNB": [
+      "Travel Platforms"
+    ],
+    "ACA": [
+      "Construction & Infrastructure"
+    ],
+    "ADBE": [
+      "Application Software"
+    ],
+    "ADI": [
+      "Semiconductors"
+    ],
+    "ADP": [
+      "Payroll & HR Services"
+    ],
+    "ADSK": [
+      "Application Software"
+    ],
+    "AEP": [
+      "Electric Utilities"
+    ],
+    "AGG": [
+      "Popular ETFs"
+    ],
+    "AIT": [
+      "Industrial Distribution"
+    ],
+    "ALKS": [
+      "Biotechnology"
+    ],
+    "ALNY": [
+      "Biotechnology"
+    ],
+    "AMAT": [
+      "Semiconductor Equipment"
+    ],
+    "AMD": [
+      "Semiconductors"
+    ],
+    "AMGN": [
+      "Biotechnology"
+    ],
+    "AMZN": [
+      "E-Commerce & Cloud"
+    ],
+    "ANF": [
+      "Apparel Retail"
+    ],
+    "APP": [
+      "Ad Technology"
+    ],
+    "ARM": [
+      "Semiconductors"
+    ],
+    "ASML": [
+      "Semiconductor Equipment"
+    ],
+    "ATI": [
+      "Advanced Materials & Metals"
+    ],
+    "AVGO": [
+      "Semiconductors"
+    ],
+    "AXON": [
+      "Security & Protection Products"
+    ],
+    "BA": [
+      "Aerospace & Defense"
+    ],
+    "BAC": [
+      "Major Banks"
+    ],
+    "BKNG": [
+      "Travel Platforms"
+    ],
+    "BKR": [
+      "Oil & Gas Equipment & Services"
+    ],
+    "BND": [
+      "Popular ETFs"
+    ],
+    "BRK-B": [
+      "Diversified Holdings"
+    ],
+    "BTSG": [
+      "Healthcare Services"
+    ],
+    "BYRN": [
+      "Security & Protection Products"
+    ],
+    "CCEP": [
+      "Beverages & Snacks"
+    ],
+    "CDNS": [
+      "Chip Design Software"
+    ],
+    "CEG": [
+      "Electric Utilities"
+    ],
+    "CIEN": [
+      "Networking & Telecom Equipment"
+    ],
+    "CMCSA": [
+      "Media & Entertainment"
+    ],
+    "CORT": [
+      "Biotechnology"
+    ],
+    "COST": [
+      "Discount Stores"
+    ],
+    "CPRT": [
+      "Auto Auctions"
+    ],
+    "CRDO": [
+      "Semiconductors"
+    ],
+    "CRWD": [
+      "Cybersecurity"
+    ],
+    "CSCO": [
+      "Networking & Telecom Equipment"
+    ],
+    "CSX": [
+      "Railroads"
+    ],
+    "CTAS": [
+      "Business Services"
+    ],
+    "CTRE": [
+      "Healthcare REITs"
+    ],
+    "CVX": [
+      "Oil & Gas Integrated"
+    ],
+    "CYTK": [
+      "Biotechnology"
+    ],
+    "DASH": [
+      "Internet Services"
+    ],
+    "DAVE": [
+      "Payments & Fintech"
+    ],
+    "DDOG": [
+      "Application Software"
+    ],
+    "DECK": [
+      "Footwear & Apparel"
+    ],
+    "DIA": [
+      "Popular ETFs"
+    ],
+    "DXCM": [
+      "Medical Devices"
+    ],
+    "EAT": [
+      "Restaurants"
+    ],
+    "EEM": [
+      "Popular ETFs"
+    ],
+    "EFA": [
+      "Popular ETFs"
+    ],
+    "EMN": [
+      "Specialty Chemicals"
+    ],
+    "ESI": [
+      "Specialty Chemicals"
+    ],
+    "EXC": [
+      "Electric Utilities"
+    ],
+    "FANG": [
+      "Oil & Gas E&P"
+    ],
+    "FAST": [
+      "Industrial Distribution"
+    ],
+    "FCFS": [
+      "Specialty Finance"
+    ],
+    "FIS": [
+      "Payments & Fintech"
+    ],
+    "FISV": [
+      "Payments & Fintech"
+    ],
+    "FIX": [
+      "Construction & Infrastructure"
+    ],
+    "FN": [
+      "Electronics Manufacturing"
+    ],
+    "FORA": [
+      "Healthcare Data & Analytics"
+    ],
+    "FORM": [
+      "Semiconductor Equipment"
+    ],
+    "FROG": [
+      "Application Software"
+    ],
+    "FTNT": [
+      "Cybersecurity"
+    ],
+    "GDDY": [
+      "Internet Services"
+    ],
+    "GEHC": [
+      "Medical Devices"
+    ],
+    "GILD": [
+      "Biotechnology"
+    ],
+    "GKOS": [
+      "Medical Devices"
+    ],
+    "GLD": [
+      "Popular ETFs"
+    ],
+    "GOLD": [
+      "Gold Mining"
+    ],
+    "GOOGL": [
+      "Internet Content"
+    ],
+    "GSHD": [
+      "Insurance Brokers"
+    ],
+    "HON": [
+      "Diversified Industrials"
+    ],
+    "HUT": [
+      "Crypto Mining"
+    ],
+    "IDCC": [
+      "IP Licensing"
+    ],
+    "IDXX": [
+      "Healthcare Diagnostics"
+    ],
+    "IJR": [
+      "Popular ETFs"
+    ],
+    "INSW": [
+      "Marine Oil Tankers"
+    ],
+    "INTC": [
+      "Semiconductors"
+    ],
+    "INTU": [
+      "Application Software"
+    ],
+    "ISRG": [
+      "Medical Devices"
+    ],
+    "IVV": [
+      "Popular ETFs"
+    ],
+    "IWM": [
+      "Popular ETFs"
+    ],
+    "JNJ": [
+      "Pharmaceuticals"
+    ],
+    "JPM": [
+      "Major Banks"
+    ],
+    "JXN": [
+      "Life & Health Insurance"
+    ],
+    "KDP": [
+      "Beverages & Snacks"
+    ],
+    "KLAC": [
+      "Semiconductor Equipment"
+    ],
+    "KMX": [
+      "Specialty Retail"
+    ],
+    "KRYS": [
+      "Biotechnology"
+    ],
+    "LAC": [
+      "Lithium & Battery Materials"
+    ],
+    "LIN": [
+      "Industrial Gases"
+    ],
+    "LIVN": [
+      "Medical Devices"
+    ],
+    "LLY": [
+      "Pharmaceuticals"
+    ],
+    "LMB": [
+      "Construction & Infrastructure"
+    ],
+    "LNC": [
+      "Life Insurance"
+    ],
+    "LRCX": [
+      "Semiconductor Equipment"
+    ],
+    "MA": [
+      "Payments & Fintech"
+    ],
+    "MAR": [
+      "Hotels & Resorts"
+    ],
+    "MATX": [
+      "Marine Shipping & Logistics"
+    ],
+    "MCHP": [
+      "Semiconductors"
+    ],
+    "MDLZ": [
+      "Packaged Foods"
+    ],
+    "MELI": [
+      "E-Commerce & Fintech"
+    ],
+    "META": [
+      "Social Media"
+    ],
+    "MNST": [
+      "Beverages & Snacks"
+    ],
+    "MOG.A": [
+      "Aerospace & Defense"
+    ],
+    "MPWR": [
+      "Semiconductors"
+    ],
+    "MRVL": [
+      "Semiconductors"
+    ],
+    "MSFT": [
+      "Infrastructure Software"
+    ],
+    "MSGS": [
+      "Sports & Entertainment"
+    ],
+    "MTCH": [
+      "Internet Content"
+    ],
+    "MTRN": [
+      "Advanced Materials & Metals"
+    ],
+    "MU": [
+      "Semiconductors"
+    ],
+    "NEM": [
+      "Gold Mining"
+    ],
+    "NFLX": [
+      "Streaming & Entertainment"
+    ],
+    "NVDA": [
+      "Semiconductors"
+    ],
+    "NXPI": [
+      "Semiconductors"
+    ],
+    "ODFL": [
+      "Freight & Logistics"
+    ],
+    "OII": [
+      "Offshore Equipment & Services"
+    ],
+    "ONB": [
+      "Regional Banks"
+    ],
+    "ORLY": [
+      "Auto Parts Retail"
+    ],
+    "PANW": [
+      "Cybersecurity"
+    ],
+    "PAYC": [
+      "Application Software"
+    ],
+    "PAYX": [
+      "Payroll & HR Services"
+    ],
+    "PCAR": [
+      "Commercial Vehicles"
+    ],
+    "PEP": [
+      "Beverages & Snacks"
+    ],
+    "PLTR": [
+      "Data Analytics Software"
+    ],
+    "PTGX": [
+      "Biotechnology"
+    ],
+    "PYPL": [
+      "Payments & Fintech"
+    ],
+    "QCOM": [
+      "Semiconductors"
+    ],
+    "QQQ": [
+      "Popular ETFs"
+    ],
+    "QQQM": [
+      "Popular ETFs"
+    ],
+    "QRVO": [
+      "Semiconductors"
+    ],
+    "RAL": [
+      "Engineered Technology Products"
+    ],
+    "REGN": [
+      "Biotechnology"
+    ],
+    "RHP": [
+      "Hotel REITs"
+    ],
+    "ROP": [
+      "Application Software"
+    ],
+    "ROST": [
+      "Apparel Retail"
+    ],
+    "RSP": [
+      "Popular ETFs"
+    ],
+    "SBUX": [
+      "Restaurants"
+    ],
+    "SCHD": [
+      "Popular ETFs"
+    ],
+    "SEZL": [
+      "Payments & Fintech"
+    ],
+    "SGI": [
+      "Household Products"
+    ],
+    "SHOP": [
+      "E-Commerce Software"
+    ],
+    "SM": [
+      "Oil & Gas E&P"
+    ],
+    "SNDK": [
+      "Computer Hardware & Storage"
+    ],
+    "SNEX": [
+      "Capital Markets & Brokerage"
+    ],
+    "SNPS": [
+      "Chip Design Software"
+    ],
+    "SPY": [
+      "Popular ETFs"
+    ],
+    "STX": [
+      "Computer Hardware & Storage"
+    ],
+    "TGTX": [
+      "Biotechnology"
+    ],
+    "TMUS": [
+      "Telecommunications"
+    ],
+    "TPG": [
+      "Asset Management"
+    ],
+    "TRNO": [
+      "Industrial REITs"
+    ],
+    "TSLA": [
+      "Automobile Manufacturers"
+    ],
+    "TTWO": [
+      "Video Games"
+    ],
+    "TWST": [
+      "Biotechnology"
+    ],
+    "TXG": [
+      "Biotechnology"
+    ],
+    "TXN": [
+      "Semiconductors"
+    ],
+    "UMBF": [
+      "Regional Banks"
+    ],
+    "V": [
+      "Payments & Fintech"
+    ],
+    "VEA": [
+      "Popular ETFs"
+    ],
+    "VIG": [
+      "Popular ETFs"
+    ],
+    "VOO": [
+      "Popular ETFs"
+    ],
+    "VRSK": [
+      "Data & Analytics"
+    ],
+    "VRTX": [
+      "Biotechnology"
+    ],
+    "VSAT": [
+      "Satellite Infrastructure"
+    ],
+    "VTI": [
+      "Popular ETFs"
+    ],
+    "VTV": [
+      "Popular ETFs"
+    ],
+    "VUG": [
+      "Popular ETFs"
+    ],
+    "VWO": [
+      "Popular ETFs"
+    ],
+    "WDAY": [
+      "Application Software"
+    ],
+    "WDC": [
+      "Computer Hardware & Storage"
+    ],
+    "WMT": [
+      "Discount Stores"
+    ],
+    "XEL": [
+      "Electric Utilities"
+    ],
+    "XLB": [
+      "Popular ETFs"
+    ],
+    "XLE": [
+      "Popular ETFs"
+    ],
+    "XLF": [
+      "Popular ETFs"
+    ],
+    "XLI": [
+      "Popular ETFs"
+    ],
+    "XLK": [
+      "Popular ETFs"
+    ],
+    "XLP": [
+      "Popular ETFs"
+    ],
+    "XLRE": [
+      "Popular ETFs"
+    ],
+    "XLV": [
+      "Popular ETFs"
+    ],
+    "XLY": [
+      "Popular ETFs"
+    ],
+    "XOM": [
+      "Oil & Gas Integrated"
+    ]
+  },
+  "stockkat_track_list": [],
+  "stockkat_trade_history": [
+    {
+      "avgCost": 20.38,
+      "closedAt": "2026-09-21T18:40:00.070Z",
+      "id": "sell-1790016000070-xarau",
+      "realizedPL": 4040.8,
+      "sellPrice": 121.4,
+      "shares": 40,
+      "symbol": "INTC"
+    },
+    {
+      "avgCost": 13.71,
+      "closedAt": "2026-09-16T13:27:52.664Z",
+      "id": "sell-1789565272664-lbc8i",
+      "realizedPL": 413.5999999999998,
+      "sellPrice": 17.47,
+      "shares": 110,
+      "symbol": "NTSK"
+    }
+  ],
+  "stockkat_triggered": [
+    {
+      "alertId": "a-aapl-brk344",
+      "id": "t-1794235640099-b1kcl",
+      "message": "AAPL rose above $344 (now $348.59)",
+      "price": 348.59,
+      "read": false,
+      "symbol": "AAPL",
+      "time": "2026-11-09T14:47:20.096Z"
+    },
+    {
+      "alertId": "a-xom-exit",
+      "id": "t-1793822705674-8yawe",
+      "message": "XOM fell 5% today (now -5.03%)",
+      "price": 168.53,
+      "read": true,
+      "symbol": "XOM",
+      "time": "2026-11-04T20:05:05.672Z"
+    },
+    {
+      "alertId": "a-xom-exit",
+      "id": "t-1793812563801-ogj9u",
+      "message": "XOM fell 5% today (now -5.08%)",
+      "price": 168.44,
+      "read": true,
+      "symbol": "XOM",
+      "time": "2026-11-04T17:16:03.801Z"
+    },
+    {
+      "alertId": "a-xom-exit",
+      "id": "t-1793811424464-23qjf",
+      "message": "XOM fell 5% today (now -5.04%)",
+      "price": 168.52,
+      "read": true,
+      "symbol": "XOM",
+      "time": "2026-11-04T16:57:04.461Z"
+    },
+    {
+      "alertId": "a-aapl-brk344",
+      "id": "t-1793805476957-j7vdx",
+      "message": "AAPL rose above $344 (now $352.98)",
+      "price": 352.98,
+      "read": true,
+      "symbol": "AAPL",
+      "time": "2026-11-04T15:17:56.952Z"
+    },
+    {
+      "alertId": "a-msft-brk550",
+      "id": "t-1793805476956-zztt7",
+      "message": "MSFT rose above $550 (now $553.43)",
+      "price": 553.43,
+      "read": true,
+      "symbol": "MSFT",
+      "time": "2026-11-04T15:17:56.952Z"
+    }
+  ],
+  "stockkat_watchlist_sort": "near-52w-low",
+  "stockkat_watchlist_tabs": {
+    "activeId": "game",
+    "assignments": {
+      "AAPL": "bluechips",
+      "ABBV": "canslim",
+      "ABNB": "bluechips",
+      "ACA": "smallcap",
+      "ADBE": "bluechips",
+      "ADI": "bluechips",
+      "ADP": "bluechips",
+      "ADSK": "bluechips",
+      "AEMD": "smallcap",
+      "AEP": "bluechips",
+      "AGG": "etfs",
+      "AIT": "smallcap",
+      "ALKS": "smallcap",
+      "ALNY": "bluechips",
+      "AMAT": "bluechips",
+      "AMD": "bluechips",
+      "AMGN": "bluechips",
+      "AMZN": "bluechips",
+      "ANF": "smallcap",
+      "APP": "bluechips",
+      "ARM": "bluechips",
+      "ASML": "bluechips",
+      "ATI": "smallcap",
+      "AVGO": "bluechips",
+      "AXON": "bluechips",
+      "BA": "main",
+      "BAC": "etf_favourites",
+      "BKNG": "bluechips",
+      "BKR": "bluechips",
+      "BND": "etfs",
+      "BRK-B": "etf_favourites",
+      "BTSG": "smallcap",
+      "BYRN": "smallcap",
+      "CCEP": "bluechips",
+      "CDNS": "bluechips",
+      "CEG": "bluechips",
+      "CIEN": "smallcap",
+      "CMCSA": "bluechips",
+      "CORT": "smallcap",
+      "COST": "bluechips",
+      "CPRT": "bluechips",
+      "CRDO": "smallcap",
+      "CRWD": "bluechips",
+      "CSCO": "bluechips",
+      "CSX": "bluechips",
+      "CTAS": "bluechips",
+      "CTNT": "smallcap",
+      "CTRE": "smallcap",
+      "CVX": "canslim",
+      "CYTK": "smallcap",
+      "DASH": "bluechips",
+      "DAVE": "watch_list",
+      "DDOG": "bluechips",
+      "DECK": "watch_list",
+      "DIA": "etfs",
+      "DXCM": "bluechips",
+      "EAT": "smallcap",
+      "EEM": "etfs",
+      "EFA": "etfs",
+      "EMN": "smallcap",
+      "ESI": "smallcap",
+      "EXC": "bluechips",
+      "FANG": "bluechips",
+      "FAST": "bluechips",
+      "FCFS": "smallcap",
+      "FIS": "watch_list",
+      "FISV": "watch_list",
+      "FIX": "smallcap",
+      "FN": "smallcap",
+      "FORA": "smallcap",
+      "FORM": "smallcap",
+      "FROG": "smallcap",
+      "FTNT": "bluechips",
+      "GDDY": "watch_list",
+      "GEHC": "main",
+      "GILD": "bluechips",
+      "GKOS": "smallcap",
+      "GLD": "etfs",
+      "GOLD": "etf_favourites",
+      "GOOG": "main",
+      "GOOGL": "bluechips",
+      "GSHD": "watch_list",
+      "HUT": "smallcap",
+      "IDCC": "smallcap",
+      "IDXX": "bluechips",
+      "IJR": "etfs",
+      "INSW": "smallcap",
+      "INTC": "main",
+      "INTU": "bluechips",
+      "ISRG": "bluechips",
+      "IVV": "etfs",
+      "IWM": "etfs",
+      "JNJ": "etf_favourites",
+      "JPM": "etf_favourites",
+      "JXN": "smallcap",
+      "KDP": "bluechips",
+      "KLAC": "bluechips",
+      "KMX": "smallcap",
+      "KRYS": "smallcap",
+      "LAC": "main",
+      "LIN": "bluechips",
+      "LIVN": "smallcap",
+      "LLY": "canslim",
+      "LMB": "watch_list",
+      "LNC": "smallcap",
+      "LRCX": "bluechips",
+      "MA": "etf_favourites",
+      "MAR": "bluechips",
+      "MATX": "smallcap",
+      "MCHP": "bluechips",
+      "MDLZ": "bluechips",
+      "MEDS": "smallcap",
+      "MELI": "bluechips",
+      "META": "bluechips",
+      "MNST": "bluechips",
+      "MOG.A": "smallcap",
+      "MPWR": "bluechips",
+      "MRVL": "bluechips",
+      "MSFT": "bluechips",
+      "MSGS": "smallcap",
+      "MTCH": "smallcap",
+      "MTRN": "smallcap",
+      "MU": "bluechips",
+      "NEM": "etf_favourites",
+      "NFLX": "bluechips",
+      "NTSK": "main",
+      "NVDA": "main",
+      "NXPI": "bluechips",
+      "ODFL": "bluechips",
+      "OII": "smallcap",
+      "ONB": "smallcap",
+      "ORLY": "bluechips",
+      "PANW": "bluechips",
+      "PAYC": "smallcap",
+      "PAYX": "bluechips",
+      "PCAR": "bluechips",
+      "PEP": "bluechips",
+      "PLTR": "bluechips",
+      "PTGX": "smallcap",
+      "PYPL": "bluechips",
+      "QCOM": "bluechips",
+      "QQQ": "etfs",
+      "QQQM": "etfs",
+      "QRVO": "smallcap",
+      "RAL": "smallcap",
+      "REGN": "bluechips",
+      "RHP": "smallcap",
+      "ROP": "bluechips",
+      "ROST": "bluechips",
+      "RSP": "etfs",
+      "SBUX": "bluechips",
+      "SCHD": "etfs",
+      "SEZL": "watch_list",
+      "SGI": "watch_list",
+      "SHOP": "bluechips",
+      "SM": "smallcap",
+      "SNDK": "bluechips",
+      "SNEX": "smallcap",
+      "SNPS": "bluechips",
+      "SPCX": "main",
+      "SPY": "etfs",
+      "STLA": "bluechips",
+      "STX": "bluechips",
+      "TGTX": "smallcap",
+      "TMUS": "bluechips",
+      "TPG": "watch_list",
+      "TRNO": "smallcap",
+      "TSLA": "bluechips",
+      "TTWO": "bluechips",
+      "TWST": "smallcap",
+      "TXG": "smallcap",
+      "TXN": "bluechips",
+      "UMBF": "smallcap",
+      "V": "etf_favourites",
+      "VEA": "etfs",
+      "VFV": "main",
+      "VFV.TO": "main",
+      "VIG": "etfs",
+      "VOO": "etfs",
+      "VRSK": "bluechips",
+      "VRTX": "bluechips",
+      "VSAT": "smallcap",
+      "VTI": "etfs",
+      "VTV": "etfs",
+      "VUG": "etfs",
+      "VWO": "etfs",
+      "WDAY": "bluechips",
+      "WDC": "bluechips",
+      "WMT": "bluechips",
+      "XEL": "bluechips",
+      "XLB": "etfs",
+      "XLE": "etfs",
+      "XLF": "etfs",
+      "XLI": "etfs",
+      "XLK": "etfs",
+      "XLP": "etfs",
+      "XLRE": "etfs",
+      "XLV": "etfs",
+      "XLY": "etfs",
+      "XOM": "canslim"
+    },
+    "tabs": [
+      {
+        "id": "main",
+        "name": "Main"
+      },
+      {
+        "id": "game",
+        "name": "Game"
+      },
+      {
+        "id": "bluechips",
+        "name": "Blue Chips"
+      },
+      {
+        "id": "watch_list",
+        "name": "Watch List"
+      },
+      {
+        "id": "canslim",
+        "name": "CANSLIM"
+      },
+      {
+        "id": "smallcap",
+        "name": "Small Cap"
+      },
+      {
+        "id": "etfs",
+        "name": "ETFs"
+      },
+      {
+        "id": "etf_favourites",
+        "name": "ETF Favourites"
+      }
+    ]
+  }
+}

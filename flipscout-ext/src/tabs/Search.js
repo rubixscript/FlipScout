@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronRight, ClipboardPaste, MapPin, MoreHorizontal, Pin, PinOff, Search as SearchIcon, Sparkles, X } from 'lucide-react';
+import { ArrowLeft, ClipboardPaste, MapPin, MoreHorizontal, Pin, PinOff, Search as SearchIcon, Sparkles, Tag, X } from 'lucide-react';
 import { KEYWORD_PACKS, keywordsPrompt, parseKeywords, parseMarketplaceLocation, searchUrl } from '../utils/logic';
-import { Card, ConfirmDelete, btn, copy, input, openUrl } from './ui';
+import { Card, ConfirmDelete, TileDelete, btn, copy, input, openUrl } from './ui';
 
 const TARGETS = [['EBAY', 'eBay'], ['EBAY_SOLD', 'Sold'], ['MARKETPLACE', 'Marketplace']];
+const RECENT = 'Recent'; // unpinned searches get their own tile at the end of the grid
 
 export default function SearchTab({ t, searches, setSearches, settings = {}, setSettings, toast }) {
   const loc = settings.mpLocation || '';
   const [q, setQ] = useState('');
-  const [collapsed, setCollapsed] = useState(() => new Set(['*']));
+  const [openCat, setOpenCat] = useState(null); // null = the category tile grid
   const [topic, setTopic] = useState('');
   const [showTools, setShowTools] = useState(false);
 
@@ -60,13 +61,22 @@ export default function SearchTab({ t, searches, setSearches, settings = {}, set
     const before = searches;
     const n = searches.filter((s) => s.pin && (s.cat || 'Uncategorised') === cat).length;
     setSearches(searches.filter((s) => !(s.pin && (s.cat || 'Uncategorised') === cat)));
+    setOpenCat(null);
     toast(`Deleted “${cat}” and ${n} keyword${n === 1 ? '' : 's'}`, () => setSearches(before));
   };
+  // Clears the unpinned recent searches (the library is untouched). Undo puts them back.
+  const clearRecent = () => {
+    const before = searches;
+    setSearches(searches.filter((s) => s.pin));
+    toast('Cleared recent searches', () => setSearches(before));
+  };
 
-  const pinned = searches.filter((s) => s.pin);
   const recent = searches.filter((s) => !s.pin);
   const groups = {};
-  pinned.forEach((s) => { (groups[s.cat || 'Uncategorised'] = groups[s.cat || 'Uncategorised'] || []).push(s); });
+  searches.filter((s) => s.pin).forEach((s) => { (groups[s.cat || 'Uncategorised'] = groups[s.cat || 'Uncategorised'] || []).push(s); });
+  const cats = Object.keys(groups).sort().map((name) => ({ name, list: groups[name] }));
+  // Falls back to the grid if the open category was emptied (e.g. last keyword deleted).
+  const current = openCat === RECENT ? { name: RECENT, list: recent } : cats.find((c) => c.name === openCat);
 
   return (
     <div>
@@ -104,29 +114,33 @@ export default function SearchTab({ t, searches, setSearches, settings = {}, set
         </Card>
       )}
 
-      {Object.keys(groups).sort().map((cat) => {
-        const open = !collapsed.has(cat);
-        return (
-          <div key={cat} style={{ marginBottom: 6 }}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <button onClick={() => { const n = new Set(collapsed); open ? n.add(cat) : n.delete(cat); setCollapsed(n); }} style={{ ...btn(t), flex: 1, justifyContent: 'flex-start', border: 'none', padding: '8px 2px', color: t.muted, fontWeight: 700 }}>
-                {open ? <ChevronDown size={15} /> : <ChevronRight size={15} />} {cat.toUpperCase()} <span style={{ fontWeight: 500 }}>{groups[cat].length}</span>
-              </button>
-              <ConfirmDelete t={t} label="Delete category and its keywords" onConfirm={() => delCategory(cat)} />
-            </div>
-            {open && groups[cat].map((s) => <KeywordRow key={s.id} t={t} s={s} go={go} toggle={toggle} del={del} />)}
+      {current ? (
+        <div>
+          <div style={{ display: 'flex', alignItems: 'center', marginBottom: 6 }}>
+            <button onClick={() => setOpenCat(null)} style={{ ...btn(t), border: 'none', padding: '4px 2px', fontWeight: 800, fontSize: 15, flex: 1, justifyContent: 'flex-start' }}>
+              <ArrowLeft size={16} /> {current.name} <span style={{ color: t.muted, fontWeight: 600, fontSize: 12.5 }}>{current.list.length}</span>
+            </button>
+            {current.name === RECENT
+              ? current.list.length > 0 && <ConfirmDelete t={t} label="Clear recent searches" onConfirm={clearRecent} />
+              : <ConfirmDelete t={t} label="Delete category and its keywords" onConfirm={() => delCategory(current.name)} />}
           </div>
-        );
-      })}
-
-      {recent.length > 0 && (
-        <div style={{ marginTop: 10 }}>
-          <div style={{ fontSize: 12, fontWeight: 700, color: t.muted, margin: '0 2px 6px' }}>RECENT {recent.length}</div>
-          {recent.slice(0, 8).map((s) => <KeywordRow key={s.id} t={t} s={s} go={go} toggle={toggle} del={del} />)}
+          {current.list.length === 0 ? (
+            <div style={{ textAlign: 'center', color: t.muted, fontSize: 13, padding: 20 }}>Nothing here — searches you run land in Recent.</div>
+          ) : (
+            current.list.map((s) => <KeywordRow key={s.id} t={t} s={s} go={go} toggle={toggle} del={del} />)
+          )}
         </div>
-      )}
-      {searches.length === 0 && !showTools && (
+      ) : cats.length + (recent.length > 0 ? 1 : 0) === 0 ? (
         <div style={{ textAlign: 'center', color: t.muted, fontSize: 13, padding: 30 }}>Type a search above, or tap “Add keywords” to start with a pack.</div>
+      ) : (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: 12 }}>
+          {cats.map((c) => (
+            <KeywordTile key={c.name} t={t} name={c.name} list={c.list} onOpen={() => setOpenCat(c.name)} onDelete={() => delCategory(c.name)} />
+          ))}
+          {recent.length > 0 && (
+            <KeywordTile t={t} name={RECENT} list={recent} onOpen={() => setOpenCat(RECENT)} onDelete={clearRecent} />
+          )}
+        </div>
       )}
     </div>
   );
@@ -164,6 +178,30 @@ function KeywordRow({ t, s, go, toggle, del }) {
       <button onClick={() => setMore(!more)} title="eBay / Sold" style={{ ...btn(t), border: 'none', padding: 6 }}><MoreHorizontal size={14} /></button>
       <button onClick={() => toggle(s)} title={s.pin ? 'Unpin' : 'Pin to library'} style={{ ...btn(t), border: 'none', padding: 6 }}>{s.pin ? <PinOff size={14} /> : <Pin size={14} />}</button>
       <button onClick={() => del(s)} title="Remove" style={{ ...btn(t), border: 'none', padding: 6 }}><X size={14} /></button>
+    </div>
+  );
+}
+
+// Square tile like the Items tab: category name, count badge and a preview of the first few
+// keywords; tap opens the keyword list. Trash chip deletes (with confirm) without opening.
+function KeywordTile({ t, name, list, onOpen, onDelete }) {
+  const hint = name === RECENT
+    ? `Clears ${list.length} recent search${list.length === 1 ? '' : 'es'}`
+    : `Deletes ${list.length} keyword${list.length === 1 ? '' : 's'}`;
+  return (
+    <div
+      onClick={onOpen}
+      style={{ position: 'relative', aspectRatio: '1 / 1', borderRadius: 18, overflow: 'hidden', cursor: 'pointer', background: t.surfaceVar, border: `1px solid ${t.outlineVar}`, padding: '12px 12px 10px' }}
+    >
+      <div style={{ position: 'absolute', top: 8, right: 8, background: 'rgba(0,0,0,0.6)', color: '#fff', borderRadius: 999, padding: '2px 9px', fontSize: 12, fontWeight: 700 }}>{list.length}</div>
+      <div style={{ fontWeight: 800, fontSize: 14.5, lineHeight: 1.25, paddingRight: 28, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{name}</div>
+      <div style={{ marginTop: 6, fontSize: 11.5, color: t.muted, paddingRight: 26 }}>
+        {list.slice(0, 3).map((s) => (
+          <div key={s.id} style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', lineHeight: 1.5 }}>{s.q}</div>
+        ))}
+      </div>
+      <Tag size={26} strokeWidth={1.5} style={{ position: 'absolute', right: 10, bottom: 10, color: t.outline }} />
+      {onDelete && <TileDelete t={t} title={`Delete “${name}”?`} hint={hint} onConfirm={onDelete} />}
     </div>
   );
 }
